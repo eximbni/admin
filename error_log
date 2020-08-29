@@ -1,0 +1,350 @@
+[27-Aug-2020 06:15:43 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/eximbinc/public_html/admin/header.php on line 2
+[27-Aug-2020 06:15:53 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:15:53 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:15:53 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:15:54 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/eximbinc/public_html/admin/header.php on line 2
+[27-Aug-2020 06:16:07 UTC] PHP Notice:  Undefined variable: message in /home/eximbinc/public_html/admin/show_franch_details.php on line 26
+[27-Aug-2020 06:16:23 UTC] PHP Notice:  Undefined variable: message in /home/eximbinc/public_html/admin/show_franch_details.php on line 26
+[27-Aug-2020 06:16:25 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/eximbinc/public_html/admin/header.php on line 2
+[27-Aug-2020 06:16:32 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/eximbinc/public_html/admin/header.php on line 2
+[27-Aug-2020 06:16:35 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:16:35 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:16:35 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:16:59 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:16:59 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:19:09 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:19:09 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:19:29 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:19:29 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:23:08 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:23:08 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:23:08 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:23:44 UTC] PHP Notice:  Undefined variable: message in /home/eximbinc/public_html/admin/show_franch_details.php on line 26
+[27-Aug-2020 06:27:57 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:27:57 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:27:57 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:38:33 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:38:33 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:38:33 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:38:33 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:39:31 UTC] PHP Notice:  Undefined variable: message in /home/eximbinc/public_html/admin/show_franch_details.php on line 26
+[27-Aug-2020 06:46:46 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/eximbinc/public_html/admin/header.php on line 2
+[27-Aug-2020 06:46:50 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/eximbinc/public_html/admin/header.php on line 2
+[27-Aug-2020 06:46:56 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:46:56 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:46:56 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:46:56 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:47:10 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:47:10 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:47:10 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:47:10 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:47:14 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:47:14 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:47:14 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:47:14 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:49:47 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:49:47 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:49:47 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:49:47 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:50:22 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:50:22 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:50:22 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:52:17 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:52:17 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:52:17 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:52:17 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:52:17 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:53:02 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:53:02 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:53:02 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:53:02 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:53:13 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:53:13 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:53:13 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:53:32 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:53:32 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:54:28 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:54:28 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:56:37 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:56:37 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:59:58 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 06:59:58 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 07:00:01 UTC] PHP Warning:  file_get_contents(http://sms.datagenit.in/API/sms-api.php?auth=D!~3727SzpGFICCeC&amp;msisdn=918008004474&amp;senderid=SMSOTP&amp;message=Franchise+with+ReqID%3A+CF-132-777862+has+completed+payment.+Please+share+OTP+to+to+activate+Franchise.+Your+EXIMBNI+verification+OTP+code+is+9452.+Please+DO+NOT+share+this+OTP+with+anyone.): failed to open stream: No route to host in /home/eximbinc/public_html/admin/ajax_sendotptoadmin.php on line 39
+[27-Aug-2020 07:00:09 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 07:00:09 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 07:01:49 UTC] PHP Notice:  Undefined variable: outp2 in /home/eximbinc/public_html/admin/ajax_approveVerifyOtp.php on line 49
+[27-Aug-2020 07:01:54 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 07:01:54 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 07:05:52 UTC] PHP Notice:  Undefined variable: outp2 in /home/eximbinc/public_html/admin/ajax_approveVerifyOtp.php on line 49
+[27-Aug-2020 07:05:55 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 07:05:55 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 07:08:28 UTC] PHP Notice:  Undefined variable: outp2 in /home/eximbinc/public_html/admin/ajax_approveVerifyOtp.php on line 49
+[27-Aug-2020 07:08:31 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 07:08:31 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 07:33:28 UTC] PHP Notice:  Undefined index: email in /home/eximbinc/public_html/admin/header.php on line 3
+[27-Aug-2020 07:33:28 UTC] PHP Notice:  Undefined index: user_id in /home/eximbinc/public_html/admin/header.php on line 3
+[27-Aug-2020 07:33:28 UTC] PHP Notice:  Undefined index: user_id in /home/eximbinc/public_html/admin/sidemenu.php on line 22
+[27-Aug-2020 07:33:28 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 30
+[27-Aug-2020 07:33:28 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 30
+[27-Aug-2020 07:33:28 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 38
+[27-Aug-2020 07:33:28 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 38
+[27-Aug-2020 07:33:28 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 46
+[27-Aug-2020 07:33:28 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 46
+[27-Aug-2020 07:33:28 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 54
+[27-Aug-2020 07:33:28 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 54
+[27-Aug-2020 07:33:28 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 62
+[27-Aug-2020 07:33:28 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 62
+[27-Aug-2020 07:33:28 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 70
+[27-Aug-2020 07:33:28 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 70
+[27-Aug-2020 07:33:28 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 78
+[27-Aug-2020 07:33:28 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 78
+[27-Aug-2020 07:33:28 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 86
+[27-Aug-2020 07:33:28 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 86
+[27-Aug-2020 07:33:28 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 94
+[27-Aug-2020 07:33:28 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 94
+[27-Aug-2020 07:33:28 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 102
+[27-Aug-2020 07:33:28 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 102
+[27-Aug-2020 07:33:28 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 07:33:28 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 07:33:29 UTC] PHP Notice:  Undefined index: email in /home/eximbinc/public_html/admin/header.php on line 3
+[27-Aug-2020 07:33:29 UTC] PHP Notice:  Undefined index: user_id in /home/eximbinc/public_html/admin/header.php on line 3
+[27-Aug-2020 07:33:29 UTC] PHP Notice:  Undefined index: user_id in /home/eximbinc/public_html/admin/sidemenu.php on line 22
+[27-Aug-2020 07:33:29 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 30
+[27-Aug-2020 07:33:29 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 30
+[27-Aug-2020 07:33:29 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 38
+[27-Aug-2020 07:33:29 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 38
+[27-Aug-2020 07:33:29 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 46
+[27-Aug-2020 07:33:29 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 46
+[27-Aug-2020 07:33:29 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 54
+[27-Aug-2020 07:33:29 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 54
+[27-Aug-2020 07:33:29 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 62
+[27-Aug-2020 07:33:29 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 62
+[27-Aug-2020 07:33:29 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 70
+[27-Aug-2020 07:33:29 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 70
+[27-Aug-2020 07:33:29 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 78
+[27-Aug-2020 07:33:29 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 78
+[27-Aug-2020 07:33:29 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 86
+[27-Aug-2020 07:33:29 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 86
+[27-Aug-2020 07:33:29 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 94
+[27-Aug-2020 07:33:29 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 94
+[27-Aug-2020 07:33:29 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 102
+[27-Aug-2020 07:33:29 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 102
+[27-Aug-2020 07:33:29 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 07:33:29 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 07:33:31 UTC] PHP Notice:  Undefined index: email in /home/eximbinc/public_html/admin/header.php on line 3
+[27-Aug-2020 07:33:31 UTC] PHP Notice:  Undefined index: user_id in /home/eximbinc/public_html/admin/header.php on line 3
+[27-Aug-2020 07:33:31 UTC] PHP Notice:  Undefined index: user_id in /home/eximbinc/public_html/admin/sidemenu.php on line 22
+[27-Aug-2020 07:33:31 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 30
+[27-Aug-2020 07:33:31 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 30
+[27-Aug-2020 07:33:31 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 38
+[27-Aug-2020 07:33:31 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 38
+[27-Aug-2020 07:33:31 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 46
+[27-Aug-2020 07:33:31 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 46
+[27-Aug-2020 07:33:31 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 54
+[27-Aug-2020 07:33:31 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 54
+[27-Aug-2020 07:33:31 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 62
+[27-Aug-2020 07:33:31 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 62
+[27-Aug-2020 07:33:31 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 70
+[27-Aug-2020 07:33:31 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 70
+[27-Aug-2020 07:33:31 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 78
+[27-Aug-2020 07:33:31 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 78
+[27-Aug-2020 07:33:31 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 86
+[27-Aug-2020 07:33:31 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 86
+[27-Aug-2020 07:33:31 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 94
+[27-Aug-2020 07:33:31 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 94
+[27-Aug-2020 07:33:31 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 102
+[27-Aug-2020 07:33:31 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 102
+[27-Aug-2020 07:33:31 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 07:33:31 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 07:41:57 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 07:41:57 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:31:30 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/eximbinc/public_html/admin/header.php on line 2
+[27-Aug-2020 08:31:45 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:31:45 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:31:45 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:31:45 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:47:20 UTC] PHP Notice:  Undefined index: email in /home/eximbinc/public_html/admin/header.php on line 3
+[27-Aug-2020 08:47:20 UTC] PHP Notice:  Undefined index: user_id in /home/eximbinc/public_html/admin/header.php on line 3
+[27-Aug-2020 08:47:20 UTC] PHP Notice:  Undefined index: user_id in /home/eximbinc/public_html/admin/sidemenu.php on line 22
+[27-Aug-2020 08:47:20 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 30
+[27-Aug-2020 08:47:20 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 30
+[27-Aug-2020 08:47:20 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 38
+[27-Aug-2020 08:47:20 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 38
+[27-Aug-2020 08:47:20 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 46
+[27-Aug-2020 08:47:20 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 46
+[27-Aug-2020 08:47:20 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 54
+[27-Aug-2020 08:47:20 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 54
+[27-Aug-2020 08:47:20 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 62
+[27-Aug-2020 08:47:20 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 62
+[27-Aug-2020 08:47:20 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 70
+[27-Aug-2020 08:47:20 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 70
+[27-Aug-2020 08:47:20 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 78
+[27-Aug-2020 08:47:20 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 78
+[27-Aug-2020 08:47:20 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 86
+[27-Aug-2020 08:47:20 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 86
+[27-Aug-2020 08:47:20 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 94
+[27-Aug-2020 08:47:20 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 94
+[27-Aug-2020 08:47:20 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 102
+[27-Aug-2020 08:47:20 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 102
+[27-Aug-2020 08:47:20 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:47:20 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:47:20 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:47:20 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:47:32 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/eximbinc/public_html/admin/header.php on line 2
+[27-Aug-2020 08:47:44 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:47:44 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:47:44 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:47:44 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:48:09 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:48:09 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:48:09 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:57:33 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:57:33 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:57:33 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:57:34 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:57:34 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:57:34 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:59:24 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:59:24 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:59:58 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:59:58 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:59:59 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 08:59:59 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 09:01:28 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 09:02:06 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 09:02:07 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 09:03:23 UTC] PHP Notice:  Undefined variable: outp2 in /home/eximbinc/public_html/admin/ajax_approveVerifyOtp.php on line 49
+[27-Aug-2020 09:03:23 UTC] PHP Notice:  Undefined variable: sfamount in /home/eximbinc/public_html/admin/ajax_approveVerifyOtp.php on line 144
+[27-Aug-2020 09:03:26 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 09:04:23 UTC] PHP Notice:  Undefined variable: outp2 in /home/eximbinc/public_html/admin/ajax_approveVerifyOtp.php on line 49
+[27-Aug-2020 09:04:23 UTC] PHP Notice:  Undefined variable: sfamount in /home/eximbinc/public_html/admin/ajax_approveVerifyOtp.php on line 144
+[27-Aug-2020 09:04:27 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 09:45:36 UTC] PHP Notice:  Undefined index: email in /home/eximbinc/public_html/admin/header.php on line 3
+[27-Aug-2020 09:45:36 UTC] PHP Notice:  Undefined index: user_id in /home/eximbinc/public_html/admin/header.php on line 3
+[27-Aug-2020 09:45:36 UTC] PHP Notice:  Undefined index: user_id in /home/eximbinc/public_html/admin/sidemenu.php on line 22
+[27-Aug-2020 09:45:36 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 30
+[27-Aug-2020 09:45:36 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 30
+[27-Aug-2020 09:45:36 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 38
+[27-Aug-2020 09:45:36 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 38
+[27-Aug-2020 09:45:36 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 46
+[27-Aug-2020 09:45:36 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 46
+[27-Aug-2020 09:45:36 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 54
+[27-Aug-2020 09:45:36 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 54
+[27-Aug-2020 09:45:36 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 62
+[27-Aug-2020 09:45:36 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 62
+[27-Aug-2020 09:45:36 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 70
+[27-Aug-2020 09:45:36 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 70
+[27-Aug-2020 09:45:36 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 78
+[27-Aug-2020 09:45:36 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 78
+[27-Aug-2020 09:45:36 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 86
+[27-Aug-2020 09:45:36 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 86
+[27-Aug-2020 09:45:36 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 94
+[27-Aug-2020 09:45:36 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 94
+[27-Aug-2020 09:45:36 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 102
+[27-Aug-2020 09:45:36 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 102
+[27-Aug-2020 09:45:36 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 09:45:36 UTC] PHP Notice:  Undefined index: user_id in /home/eximbinc/public_html/admin/franchise_request.php on line 527
+[27-Aug-2020 09:47:04 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/eximbinc/public_html/admin/header.php on line 2
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined variable: message in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 24
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 09:53:05 UTC] PHP Notice:  Undefined index: country in /home/eximbinc/public_html/admin/subscriptionPackages.php on line 62
+[27-Aug-2020 11:20:09 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/eximbinc/public_html/admin/header.php on line 2
+[27-Aug-2020 11:20:39 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/eximbinc/public_html/admin/header.php on line 2
+[27-Aug-2020 11:20:39 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/eximbinc/public_html/admin/header.php on line 2
+[27-Aug-2020 11:20:42 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 11:30:15 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/eximbinc/public_html/admin/header.php on line 2
+[27-Aug-2020 11:37:12 UTC] PHP Notice:  Undefined index: email in /home/eximbinc/public_html/admin/header.php on line 3
+[27-Aug-2020 11:37:12 UTC] PHP Notice:  Undefined index: user_id in /home/eximbinc/public_html/admin/header.php on line 3
+[27-Aug-2020 11:37:12 UTC] PHP Notice:  Undefined index: user_id in /home/eximbinc/public_html/admin/sidemenu.php on line 22
+[27-Aug-2020 11:37:12 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 30
+[27-Aug-2020 11:37:12 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 30
+[27-Aug-2020 11:37:12 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 38
+[27-Aug-2020 11:37:12 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 38
+[27-Aug-2020 11:37:12 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 46
+[27-Aug-2020 11:37:12 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 46
+[27-Aug-2020 11:37:12 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 54
+[27-Aug-2020 11:37:12 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 54
+[27-Aug-2020 11:37:12 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 62
+[27-Aug-2020 11:37:12 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 62
+[27-Aug-2020 11:37:12 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 70
+[27-Aug-2020 11:37:12 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 70
+[27-Aug-2020 11:37:12 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 78
+[27-Aug-2020 11:37:12 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 78
+[27-Aug-2020 11:37:12 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 86
+[27-Aug-2020 11:37:12 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 86
+[27-Aug-2020 11:37:12 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 94
+[27-Aug-2020 11:37:12 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 94
+[27-Aug-2020 11:37:12 UTC] PHP Notice:  Undefined variable: permission in /home/eximbinc/public_html/admin/sidemenu.php on line 102
+[27-Aug-2020 11:37:12 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/eximbinc/public_html/admin/sidemenu.php on line 102
+[27-Aug-2020 11:37:12 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 11:37:12 UTC] PHP Notice:  Undefined index: user_id in /home/eximbinc/public_html/admin/franchise_request.php on line 527
+[27-Aug-2020 11:37:18 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/eximbinc/public_html/admin/header.php on line 2
+[27-Aug-2020 11:37:22 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 11:49:15 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 11:55:17 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 11:55:17 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 11:55:17 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 11:56:28 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 11:56:28 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 11:56:28 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 11:56:32 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 11:56:32 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 11:56:32 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 11:59:22 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 11:59:22 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 11:59:22 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 11:59:26 UTC] PHP Notice:  Undefined variable: message in /home/eximbinc/public_html/admin/show_franch_details.php on line 26
+[27-Aug-2020 11:59:26 UTC] PHP Notice:  Undefined variable: message in /home/eximbinc/public_html/admin/show_franch_details.php on line 26
+[27-Aug-2020 11:59:32 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 11:59:32 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 11:59:32 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 12:02:44 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 12:02:44 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 12:03:35 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 12:03:35 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 12:03:36 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 12:03:36 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 12:04:23 UTC] PHP Notice:  Undefined variable: sts1 in /home/eximbinc/public_html/admin/franchise_request.php on line 324
+[27-Aug-2020 12:07:41 UTC] PHP Notice:  Undefined variable: outp2 in /home/eximbinc/public_html/admin/ajax_approveVerifyOtp.php on line 49
+[27-Aug-2020 12:07:41 UTC] PHP Notice:  Undefined variable: outp in /home/eximbinc/public_html/admin/ajax_approveVerifyOtp.php on line 237
+[27-Aug-2020 12:08:13 UTC] PHP Notice:  Undefined variable: outp2 in /home/eximbinc/public_html/admin/ajax_approveVerifyOtp.php on line 49
+[27-Aug-2020 12:08:13 UTC] PHP Notice:  Undefined variable: cfamount in /home/eximbinc/public_html/admin/ajax_approveVerifyOtp.php on line 165
+[27-Aug-2020 12:09:15 UTC] PHP Notice:  Undefined variable: outp2 in /home/eximbinc/public_html/admin/ajax_approveVerifyOtp.php on line 49
+[28-Aug-2020 07:36:28 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/eximbinc/public_html/admin/header.php on line 2
