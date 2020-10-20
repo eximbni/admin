@@ -1,7 +1,10 @@
+<?php session_start(); ?>
 <?php
-session_start();
 if($_SESSION['email']=='' && $_SESSION['user_id']=='')
-{ header("Location: login.php"); }
+{ 
+    header("Location: login.php"); 
+    
+}
 ?>
 <!DOCTYPE html>
 <html>

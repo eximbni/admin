@@ -1,4 +1,5 @@
-<?php
+<?php session_start(); ?>
+<?php 
 $message='';
 if(isset($_POST['submit']))
 {
@@ -10,13 +11,12 @@ $result = mysqli_query($conn,$sql);
 $row_count = mysqli_num_rows($result);
 if($row_count==1)
 {
-	echo "Login Success";
+	//echo "Login Success";
 	$row_user = mysqli_fetch_array($result);
 	$user_id = $row_user['id'];
-	session_start();
 	$_SESSION['user_id'] = $user_id;
 	$_SESSION['email'] = $email;
-	header("location: index.php");
+	header('Location: index.php');
 }
 else
 {

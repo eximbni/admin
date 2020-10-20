@@ -27,7 +27,7 @@ $message='';
 			$user_country = $row_postedby['country_id'];
 			$leadref_id = $row_postedby['leadref_id'];
 			//email sending
-			$email = 'info@eximbni.com';
+/*			$email = 'info@eximbni.com';
 			$password = '123456';
 			$to_email = $uemail;
 			$message = "Your lead request for $leadref_id is approved by admin";
@@ -47,7 +47,35 @@ $message='';
 			$mail->Subject = $subject;
 			$mail->Body = $message;
 			$mail->AddAddress($to_email);
+			$mail->Send();*/
+
+
+            $email = 'noreply@eximbni.com';
+            $password = '@team&1234';
+            $to_email = $uemail;
+           // $to_cc = 'ganesh.vab@gmail.com';
+			$message = "Your lead request for $leadref_id is approved by admin";
+			$subject = "Lead $leadref_id Approved";
+            $mail = new PHPMailer(); // create a new object
+            $mail->IsSMTP(); // enable SMTP
+            $mail->SMTPDebug = 0; // debugging: 1 = errors and messages, 2 = messages only
+            $mail->SMTPAuth = true; // authentication enabled
+            $mail->SMTPSecure = 'none'; // secure transfer enabled REQUIRED for Gmail
+            $mail->Host = "mail.eximbni.com";
+            $mail->Port = 587; // or 587
+            $mail->IsHTML(true);
+            $mail->Username = $email;
+            $mail->Password = $password;
+            $mail->SetFrom($email);
+            $mail->Subject = $subject;
+            $mail->Body = $message;
+            $mail->AddAddress($to_email);
+            $mail->AddCC($to_cc);
 			$mail->Send();
+
+
+
+
 			//email sending
 			
 			//FCM Push Notification
@@ -105,29 +133,30 @@ $message='';
     			$user_country = $row_postedby['country_id'];
     			$leadref_id = $row_postedby['leadref_id'];				
 				
-				
-				//email sending
-				$email = 'info@eximbin.com';
-                $password = 'EximBni.2020';
-				$to_email = $uemail;
-				$message = "Your lead request for $leadref_id is approved by admin";
-				$subject = "Lead $leadref_id Approved";
-					
-				$mail = new PHPMailer(); // create a new object
-				$mail->IsSMTP(); // enable SMTP
-				$mail->SMTPDebug = 0; // debugging: 1 = errors and messages, 2 = messages only
-				$mail->SMTPAuth = true; // authentication enabled
-				$mail->SMTPSecure = 'none'; // secure transfer enabled REQUIRED for Gmail
-				$mail->Host = "mail.eximbin.com";
-				$mail->Port = 25; // or 587
-				$mail->IsHTML(true);
-				$mail->Username = $email;
-				$mail->Password = $password;
-				$mail->SetFrom($email);
-				$mail->Subject = $subject;
-				$mail->Body = $message;
-				$mail->AddAddress($to_email);
-				$mail->Send();
+            $email = 'noreply@eximbni.com';
+            $password = '@team&1234';
+            $to_email = $uemail;
+            $to_cc = 'ganesh.vab@gmail.com';
+			$message = "Your lead request for $leadref_id is approved by admin";
+			$subject = "Lead $leadref_id Approved";
+            $mail = new PHPMailer(); // create a new object
+            $mail->IsSMTP(); // enable SMTP
+            $mail->SMTPDebug = 0; // debugging: 1 = errors and messages, 2 = messages only
+            $mail->SMTPAuth = true; // authentication enabled
+            $mail->SMTPSecure = 'none'; // secure transfer enabled REQUIRED for Gmail
+            $mail->Host = "mail.eximbni.com";
+            $mail->Port = 587; // or 587
+            $mail->IsHTML(true);
+            $mail->Username = $email;
+            $mail->Password = $password;
+            $mail->SetFrom($email);
+            $mail->Subject = $subject;
+            $mail->Body = $message;
+            $mail->AddAddress($to_email);
+            $mail->AddCC($to_cc);
+			$mail->Send();
+
+
 				//email sending
 				
 				//FCM Push Notification
@@ -190,9 +219,41 @@ $message='';
                     $id[]=$furow["device_id"];
                 }
             }
-            $title = "Lead rejected";
+			
+			$sql_postedby = "select u.email, u.id, u.country_id, l.leadref_id from leads l, users u where l.posted_by=u.id and l.id='$lead_id'";
+			$res_postedby = mysqli_query($conn,$sql_postedby);
+			$row_postedby = mysqli_fetch_array($res_postedby);
+			$uemail = $row_postedby['email'];
+    		$posted_by = $row_postedby['id'];
+    		$user_country = $row_postedby['country_id'];
+    		$leadref_id = $row_postedby['leadref_id'];				
+				
+            $email = 'noreply@eximbni.com';
+            $password = '@team&1234';
+            $to_email = $uemail;
+            $to_cc = 'ganesh.vab@gmail.com';
+			$message = "Your lead request for $leadref_id is rejected by admin";
+			$subject = "Lead $leadref_id Rejected";
+            $mail = new PHPMailer(); // create a new object
+            $mail->IsSMTP(); // enable SMTP
+            $mail->SMTPDebug = 0; // debugging: 1 = errors and messages, 2 = messages only
+            $mail->SMTPAuth = true; // authentication enabled
+            $mail->SMTPSecure = 'none'; // secure transfer enabled REQUIRED for Gmail
+            $mail->Host = "mail.eximbni.com";
+            $mail->Port = 587; // or 587
+            $mail->IsHTML(true);
+            $mail->Username = $email;
+            $mail->Password = $password;
+            $mail->SetFrom($email);
+            $mail->Subject = $subject;
+            $mail->Body = $message;
+            $mail->AddAddress($to_email);
+            $mail->AddCC($to_cc);
+			$mail->Send();
+
+/*            $title = "Lead rejected";
 			$push_message = $message;
-            fcm($push_message,$id,$title);
+            fcm($push_message,$id,$title);*/
 			
 		}
 		else
@@ -215,7 +276,7 @@ $message='';
   .di{ margin-right:38px;padding:6px;text-align:center;}
 
 </style>
-			<?php include "header.php"?>
+			<?php include "header.php" ?>
 		  <!-- /.navbar -->
 
 		  <!-- Main Sidebar Container -->

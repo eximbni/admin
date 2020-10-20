@@ -31,8 +31,8 @@ if (isset($_SERVER['HTTP_ORIGIN'])) {
 	$to_email = $_POST['id'];
 
                 //email sending
-				$email = 'info123@eximbin.com';
-                $password = 'EximBni.2020';
+				$email = 'noreply@eximbni.com';
+                $password = '@team&1234';
 				$to_email = $to_email;
 				$message = "Please fillup following form and send us on info@miioslimitted.com";
 				$subject = "Fill up form and send us ";
@@ -41,8 +41,8 @@ if (isset($_SERVER['HTTP_ORIGIN'])) {
 				$mail->IsSMTP(); // enable SMTP
 				$mail->SMTPDebug = 0; // debugging: 1 = errors and messages, 2 = messages only
 				$mail->SMTPAuth = true; // authentication enabled
-				$mail->SMTPSecure = 'TLS'; // secure transfer enabled REQUIRED for Gmail
-				$mail->Host = "mail.eximbin.com";
+				$mail->SMTPSecure = 'none'; // secure transfer enabled REQUIRED for Gmail
+				$mail->Host = "mail.eximbni.com";
 				$mail->Port = 587; // or 587
 				$mail->IsHTML(true);
 				$mail->Username = $email;

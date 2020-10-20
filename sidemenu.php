@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <a href="index.php" class="brand-link">
       <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
@@ -25,9 +26,10 @@
 		 
 		while($row = mysqli_fetch_array($result))
 		{
-			$permission=explode(",",$row['permissions']);
+		    $permission=explode(",",$row['permissions']);
+		    //print_r($permission);
 		}
-		if(in_array("franchise",$permission)) 
+		if(in_array("franchise" , $permission)) 
 		{
 			$franchise = "franchise";
 		}
@@ -256,6 +258,13 @@
                 <a href="message.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Send Message</p>
+                </a>
+              </li>
+        
+              <li class="nav-item">
+                <a href="getOtplist.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>OTP LIst</p>
                 </a>
               </li>
               

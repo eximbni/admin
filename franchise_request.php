@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php
 $message = '';
 include("config.php");
@@ -30,8 +31,8 @@ if (isset($_POST['forward'])) {
         $message = "Your Franchise request for ".$urequest_id." is under process ";
 		$subject = "Your Franchise request for ".$urequest_id." status ";
 		
-        $email = 'info@eximbin.com';
-        $password = 'EximBni.2020';
+        $email = 'noreply@eximbni.com';
+        $password = '@team&1234';
         $to_email = $uemail;
         $to_cc = 'miioslimited@gmail.com';
         $to_bcc = 'muralimiios@gmail.com';
@@ -43,8 +44,8 @@ if (isset($_POST['forward'])) {
 		$mail->SMTPDebug = 0; // debugging: 1 = errors and messages, 2 = messages only
 		$mail->SMTPAuth = true; // authentication enabled
 		$mail->SMTPSecure = 'none'; // secure transfer enabled REQUIRED for Gmail
-		$mail->Host = "mail.eximbin.com";
-		$mail->Port = 25; // or 587
+		$mail->Host = "mail.eximbni.com";
+		$mail->Port = 587; // or 587
 		$mail->IsHTML(true);
 		$mail->Username = $email;
 		$mail->Password = $password;
@@ -86,8 +87,8 @@ if (isset($_POST['reject'])) {
         $message = "Your Franchise request for ".$urequest_id." is rejected ";
 		$subject = "Your Franchise request for ".$urequest_id." status ";
 		
-        $email = 'info@eximbin.com';
-        $password = 'EximBni.2020';
+        $email = 'noreply@eximbni.com';
+        $password = '@team&1234';
         $to_email = $uemail;
         $to_cc = 'miioslimited@gmail.com';
         $to_bcc = 'muralimiios@gmail.com';
@@ -98,8 +99,8 @@ if (isset($_POST['reject'])) {
 		$mail->SMTPDebug = 0; // debugging: 1 = errors and messages, 2 = messages only
 		$mail->SMTPAuth = true; // authentication enabled
 		$mail->SMTPSecure = 'none'; // secure transfer enabled REQUIRED for Gmail
-		$mail->Host = "mail.eximbin.com";
-		$mail->Port = 25; // or 587
+		$mail->Host = "mail.eximbni.com";
+		$mail->Port = 587; // or 587
 		$mail->IsHTML(true);
 		$mail->Username = $email;
 		$mail->Password = $password;

@@ -98,11 +98,7 @@
                     $sql_accept3 = "update franchise_request set status ='1' where id='$fr_id'";
                     $res_accept3 = mysqli_query($conn, $sql_accept3);
                    
-                    if($franchise_type_id == 2){
-                        
-                         
-                        //Identifying Commission
-                        
+                    if($franchise_type_id == 2){                      
                         
                         $cfrcode = "CF-" . $country_id;
                         $getcf = "select * from franchise_users where frcode='$cfrcode'";
@@ -123,13 +119,7 @@
                             $totalcommission = $agreed_amount * 4.5;
                         }
                         
-                        //Identifying Commission code ends here
-                        
-                      
-                        
-                        //country Franchise Commission
-                        
-                        
+
                         $cfrcode = "CF-" . $country_id;
                         $getcf = "select * from franchise_users where frcode='$cfrcode'";
                         $resgetcf = mysqli_query($conn, $getcf);
@@ -149,43 +139,17 @@
                         
                         }
                         
-                        //country franchise code ends here
-                         $payment_date = date("Y-m-d");
-                        //R&D Amount code starts here
+                        $payment_date = date("Y-m-d");
                         
-/*                        $rnd_amount = $agreed_amount*0.1;
-                        $insrnd = "insert into rndfund (user_id,state,amount,country, payment_for,payment_date,status) values ('$user_id','$state_id','$rnd_amount','$country_id','franchise deposit','$payment_date','1') ";
-                        $resrnd = mysqli_query($conn,$insrnd);
-                        */
-                        //R&D Amount code ends here
-                        
-                        
-                        //EximBNI Account code starts here
-                    //$exim_amount  = $agreed_amount-($cfamount+$rnd_amount);
-                         $exim_amount  = $agreed_amount-($cfamount);
-                         $eximcom = "insert into eximfund (user_id,state_id,country_id,payment_for,amount,status,payment_date) values ('$user_id','$state_id','$country_id','franchise deposit','$exim_amount','1','$payment_date')";
-                            $resexim = mysqli_query($conn, $eximcom);
-                        //EximBni code Ends Here
-                     
                     }else{
                         
                           $payment_date = date("Y-m-d");
                            //R&D Amount code starts here
                         
-/*                        $rnd_amount = $agreed_amount*0.1;
-                        $insrnd = "insert into rndfund (user_id,state,amount,country, payment_for,payment_date,status) values ('$user_id','$state_id','$rnd_amount','$country_id','franchise deposit','$payment_date','1') ";
-                        $resrnd = mysqli_query($conn,$insrnd);*/
-                        
-                        //R&D Amount code ends here                     
-                        
-                        //EximBNI Account code starts here
-                       // $exim_amount  = $agreed_amount-($rnd_amount);
-                         $exim_amount  = $agreed_amount;
-                         $eximcom = "insert into eximfund (user_id,state_id,country_id,payment_for,amount,status,payment_date) values ('$user_id','$state_id','$country_id','franchise deposit','$exim_amount','1','$payment_date')";
-                            $resexim = mysqli_query($conn, $eximcom);
-                        //EximBni code Ends Here                     
-                        
-                        
+                        $exim_amount  = $agreed_amount;
+                        $eximcom = "insert into eximfund (user_id,state_id,country_id,payment_for,amount,status,payment_date) values ('$user_id','$state_id','$country_id','franchise deposit','$exim_amount','1','$payment_date')";
+                        $resexim = mysqli_query($conn, $eximcom);
+                                                                    
                     }
                     
                             
@@ -197,8 +161,8 @@
         		            
                     
                     //email sending
-    				$email = 'info@eximbin.com';
-                    $password = 'EximBni.2020';
+    				$email = 'noreply@eximbni.com';
+                    $password = '@team&1234';
     				$to_email = $uemail;
     				$to_cc = 'miioslimited@gmail.com';
                     $to_bcc = 'muralimiios@gmail.com';
@@ -209,9 +173,9 @@
     				$mail->IsSMTP(); // enable SMTP
     				$mail->SMTPDebug = 0; // debugging: 1 = errors and messages, 2 = messages only
     				$mail->SMTPAuth = true; // authentication enabled
-    				$mail->SMTPSecure = 'TLS'; // secure transfer enabled REQUIRED for Gmail
-    				$mail->Host = "mail.eximbin.com";
-    				$mail->Port = 25; // or 587
+    				$mail->SMTPSecure = 'none'; // secure transfer enabled REQUIRED for Gmail
+    				$mail->Host = "mail.eximbni.com";
+    				$mail->Port = 587; // or 587
     				$mail->IsHTML(true);
     				$mail->Username = $email;
     				$mail->Password = $password;
@@ -225,12 +189,12 @@
     				
                     $outp = 1 ;
                 } 
-               
-           }else{
-               $outp = $outps;
+               $outp = 1 ;
+            }else{
+               $outp = 1;// $ins;
            }
         	
-        			
+        	$outp = 1; //$ins;	
  	    }
  	    
  	          // $outp=json_encode($outp);

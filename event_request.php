@@ -15,7 +15,7 @@ $message='';
 		$coupons = $_POST['coupons'];
 		$expiry_date = $_POST['expiry_date'];
 		
-		$sql_accept = "update event_request set status='1', apporved_budget='$app_budget' where id='$id'";
+		$sql_accept = "update event_request set status='1', approved_budget='$app_budget' where id='$id'";
 		$res_accept = mysqli_query($conn,$sql_accept);
 		if($res_accept)
 		{
@@ -117,7 +117,8 @@ $message='';
 							<?php
 								$srno = 1;
 								include("config.php");
-								$sql_franch = "SELECT er.*,fr.name FROM event_request er, franchise_users fr where er.franchise_id=fr.id and er.status='0'";
+								//$sql_franch = "SELECT er.*,fr.name FROM event_request er, franchise_users fr where er.franchise_id=fr.id and er.status='0'";
+								$sql_franch = "SELECT er.*, fr.name FROM event_request er, franchise_users fr where er.franchise_id = fr.id and er.status='0'";
 								$res_franch = mysqli_query($conn,$sql_franch);
 								while($row_franch=mysqli_fetch_array($res_franch))
 								{
@@ -175,7 +176,8 @@ $message='';
 							<?php
 								$srno = 1;
 								include("config.php");
-								$sql_franch = "SELECT er.*,fr.name FROM event_request er, franchise_users fr where er.franchise_id=fr.id and er.status='1'";
+								//$sql_franch = "SELECT er.*,fr.name FROM event_request er, franchise_users fr where er.franchise_id=fr.id and er.status='1'";
+								$sql_franch = "SELECT er.*, fr.name FROM event_request er, franchise_users fr where er.franchise_id = fr.user_id and er.status='1'";
 								$res_franch = mysqli_query($conn,$sql_franch);
 								while($row_franch=mysqli_fetch_array($res_franch))
 								{
@@ -190,7 +192,7 @@ $message='';
 								  <td><?php echo $row_franch['venue']; ?></td>
 								  <td><?php echo $row_franch['participents']; ?></td>
 								  <td><?php echo $row_franch['conversions']; ?></td>
-								  <td><?php echo $row_franch['apporved_budget'] ?></td>
+								  <td><?php echo $row_franch['approved_budget'] ?></td>
 								</tr>
 							<?php $srno++; } ?>
 						  
@@ -226,7 +228,8 @@ $message='';
 							<?php
 								$srno = 1;
 								include("config.php");
-								$sql_franch = "SELECT er.*,fr.name FROM event_request er, franchise_users fr where er.franchise_id=fr.id and er.status='2'";
+								//$sql_franch = "SELECT er.*,fr.name FROM event_request er, franchise_users fr where er.franchise_id=fr.id and er.status='2'";
+								$sql_franch = "SELECT er.*, fr.name FROM event_request er, franchise_users fr where er.franchise_id = fr.user_id and er.status='2'";
 								$res_franch = mysqli_query($conn,$sql_franch);
 								while($row_franch=mysqli_fetch_array($res_franch))
 								{

@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <style>
 /*Style For Modal*/
 
@@ -127,8 +127,8 @@ include "header.php";
                       <th>Banner Image</th>
                       <th>Category</th>
                       <th>Chapter</th>
-                      <th>Start Date</th>
-                      <th>End Date</th>
+                      <!-- <th>Start Date</th>
+                      <th>End Date</th> -->
     				  <th>Posted By</th>
     				  <th>Status</th>
                       <th>Action</th>
@@ -146,14 +146,19 @@ include "header.php";
     				?>
                     <tr>
                       <td><?php echo $srno; ?></td>
-                      <td><img id="img<?php echo $srno; ?>" src="uploads/banner/<?php echo $row_banner['banner_image']; ?>" class="img-circle" width="50" height="50" onclick="showImage(<?php echo $srno; ?>);"></td>
+                      <td><img id="img<?php echo $srno; ?>" src="https://eximbni.com/api/uploads/<?php echo $row_banner['banner_image']; ?>" class="" width="200" height="80" onclick="showImage(<?php echo $srno; ?>);"></td>
                       <td><?php echo $row_banner['category_name']; ?></td>
                       <td><?php echo $row_banner['chapter_name']; ?></td>
-                      <td><?php echo $row_banner['start_date']; ?></td>
-                      <td><?php echo $row_banner['end_date']; ?></td>
+                     <!--  <td><?php echo $row_banner['start_date']; ?></td>
+                      <td><?php echo $row_banner['end_date']; ?></td> -->
                       <td><?php echo $row_banner['name']; ?></td>
-    				  <td><?php if($row_banner['status']==0){echo "Pending";} else{ echo "Approved";}?></td>
-                      <td><a href="approve_banner.php?id=<?php echo $row_banner['id']; ?>" class="btn btn-warning">Approve</a></td>
+    				          <?php if($row_banner['status']==0){echo "<td style='color:red;'> Pending </td>"; ?>
+                       <td><a href="approve_banner.php?status=act&id=<?php echo $row_banner['id']; ?>" class="btn btn-success">Approve</a></td>
+                      <?php } else{ echo "<td style='color:green;'> Approved </td>"; ?>
+                       <td><a href="approve_banner.php?status=del&id=<?php echo $row_banner['id']; ?>" class="btn btn-danger">Delete</a></td>
+                    <?php  } ?>
+                     
+                      
                     </tr>
                     <?php } ?>
                     </tbody>

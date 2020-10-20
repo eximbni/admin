@@ -6,7 +6,6 @@
 
 	require '../PHPMailer/src/Exception.php';
 	require '../PHPMailer/src/PHPMailer.php';
-	//require '../PHPMailer/src/PHPMailerAutoload.php';
 	require '../PHPMailer/src/SMTP.php';
 	
 	if(isset($_POST['id'])){
@@ -26,12 +25,16 @@
 
     	$created_date = date('Y-m-d H:i:s');
     	
-        $sql_fs = "SELECT * FROM franchiserequest_status WHERE request_id ='$request_id' AND request_user_id ='$request_userid' ";
+        $sql_fs = "SELECT * FROM franchiserequest_status WHERE request_id ='$request_id'";
         
         $qry_fs = mysqli_query($conn,$sql_fs);
         $num_fs = mysqli_num_rows($qry_fs);
+        if($num_fs > 0){
+            $outp= 0;
+        }
         
-        if($num_fs == 0){
+        
+        else{
             
             $sql_accept = "update franchise_request set status='3' where request_id='$request_id'";
             $res_accept = mysqli_query($conn, $sql_accept);
@@ -47,8 +50,8 @@
                     $to_email = $row_email['email'];                
                 
                     //email sending
-    				$email = 'info@eximbin.com';
-                    $password = 'EximBni.2020';
+    				$email = 'noreply@eximbni.com';
+                    $password = '@team&1234';
     				$to_email = $to_email;
     			    $to_cc = 'miioslimited@gmail.com';
                     $to_bcc = 'muralimiios@gmail.com';
@@ -59,9 +62,9 @@
     				$mail->IsSMTP(); // enable SMTP
     				$mail->SMTPDebug = 0; // debugging: 1 = errors and messages, 2 = messages only
     				$mail->SMTPAuth = true; // authentication enabled
-    				$mail->SMTPSecure = 'TLS'; // secure transfer enabled REQUIRED for Gmail
-    				$mail->Host = "mail.eximbin.com";
-    				$mail->Port = 25; // or 587
+    				$mail->SMTPSecure = 'none'; // secure transfer enabled REQUIRED for Gmail
+    				$mail->Host = "mail.eximbni.com";
+    				$mail->Port = 587; // or 587
     				$mail->IsHTML(true);
     				$mail->Username = $email;
     				$mail->Password = $password;
@@ -90,10 +93,7 @@
             }         
             
             
-        }else{
-            $outp= 0;
         }
-        
 
         			
         $outp=json_encode($outp);

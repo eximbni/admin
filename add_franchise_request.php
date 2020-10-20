@@ -76,19 +76,9 @@ if(isset($_POST['submit'])){
 
 <div class="wrapper">
 
-			
-
 			<?php include("header.php")?>
 
-			
-
-			
-
 		  <!-- /.navbar -->
-
-
-
-		  <!-- Main Sidebar Container -->
 
 		  <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
