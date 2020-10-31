@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $message='';
 if(isset($_POST['submit'])){
 	include("config.php");

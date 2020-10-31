@@ -8,14 +8,14 @@ require "header1.php";
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Franchise List</h1>
+            <h1 class="m-0 text-dark">Total Franchise Users List</h1>
             <h4 style="color:red"><?= $message; ?></h4>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-              <li class="breadcrumb-item">Franchise </li>
-              <li class="breadcrumb-item active">Franchise List</li>
+              <li class="breadcrumb-item">Dashboard </li>
+              <li class="breadcrumb-item active">Total Franchise Users</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -41,7 +41,7 @@ require "header1.php";
                 <tbody>
 				<?php
 				$srno = 0;
-				$sql_franch = "SELECT * FROM `franchise_users`";
+				$sql_franch = "SELECT * FROM `franchise_users` WHERE status='1' ORDER BY id DESC";
 				$res_franch = mysqli_query($conn,$sql_franch);
 				while($row_franch=mysqli_fetch_array($res_franch))
 				{  $srno++;

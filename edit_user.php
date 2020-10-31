@@ -24,58 +24,46 @@ if(isset($_POST['submit'])){
 	//echo $sql;
 	$res = mysqli_query($conn,$sql);
 	if($res){
-		$message = "User Update Successfully";
+		$message = "<h4 style='color:green'> Admin User Details Update Successfully </h4>";
 	}
 	else{
-		$message = "Error updating User";
+		$message = "<h4 style='color:red'> Error updating Admin User Details </h4>";
 		echo mysqli_error($conn);
 	}
 }
+require "header1.php";
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-  
-</head>
-<body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
-
-			<?php include("header.php")?>
-		  <!-- /.navbar -->
-
-		  <!-- Main Sidebar Container -->
-		  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-			<!-- Brand Logo -->
-			<?php include("sidemenu.php");?>
-		  </aside>
-			<div class="content-wrapper">
-			
-				<section class="content-header">
-				  <div class="container-fluid">
-					<div class="row mb-2">
-					  <div class="col-sm-12">
-						<ol class="breadcrumb float-sm-left">
-						  <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-						  <li class="breadcrumb-item"><a href="">Admin User Module</a></li>
-						  <li class="breadcrumb-item active">Edit User</li>
-						</ol>
-					  </div>
-					</div>
-					<div class="row mb-2">
-					  <div class="col-sm-12">
-						<h4 style="text-align:center;"><b>Edit User</b></h4>
-					  </div>
-					</div>
-				  </div><!-- /.container-fluid -->
-	
-				</section>
-				
-				
-				<section>
-				<h2 style="color:red"><?php echo $message; ?></h2>
-				<div class="card p-3">
-				<div class="container">
-					<form role="form" action="<?php echo $_SERVER['PHP-SELF']; ?>" method="POST">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Update Admin User Details</h1>
+            <?php echo $message; ?> 
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+              <li class="breadcrumb-item">Admin User </li>
+              <li class="breadcrumb-item active">Update Admin User</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-body"> 
+                        <div class="  ">
+            				<form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" >
+            				<input type="hidden" name="country_id" class="form-control" value="<?php echo $_SESSION['country']; ?>">
+                            <div class="box-body">
+                                <div class="row">
 									<?php
 									$id = $_GET['id'];
 									$sql = "select * from admin_users where id='$id'";
@@ -83,16 +71,17 @@ if(isset($_POST['submit'])){
 									$row = mysqli_fetch_assoc($res);
 									$permissions=explode(",",$row['permissions']);
 									?>
-									<div class="form-group">
+									
+									<div class="col-6 form-group">
 									  <label for="">Username </label>
 									  <input type="text" class="form-control" id="username" name="username" placeholder="Username" value="<?php echo $row['name']; ?>" required>
 									  <input type="hidden" class="form-control" name="id" value="<?php echo $row['id']; ?>">
 									</div>
-									<div class="form-group">
+									<div class="col-6 form-group">
 									  <label for="">Mobile No </label>
 									  <input type="number" class="form-control" id="" name="mobile" placeholder="Mobile No" value="<?php echo $row['mobile']; ?>" required>
 									</div>
-									<div class="form-group">
+									<div class="col-6 form-group">
 									  <label for="">Email </label>
 									  <input type="email" class="form-control" id="" name="email" placeholder="Email" value="<?php echo $row['email']; ?>" required>
 									</div>
@@ -100,29 +89,38 @@ if(isset($_POST['submit'])){
 									  <label for="">Password </label>
 									  <input type="password" class="form-control" name="password" id="" placeholder="******" required>
 									</div-->
-									<div class="form-group">
+									<div class="col-6 form-group">
 									  <label>Role</label>
 									  <select class="form-control" name="role">
-									  <option><?php echo $row['role']; ?></option>
-									  <option>Select Role</option>
-										<option>Super Admin</option>
-										<option>Admin</option>
-										<option>User</option>
+									   <option>Select Role</option>
+    									<?php 
+    										$get1 = "select * from admin_user_roles";
+    										$res1 = mysqli_query($conn,$get1);
+    										if($res1){
+    											while($row1=mysqli_fetch_assoc($res1)){
+    											if($row1['id'] == $row['role'] ){
+    											    $statsu="selected";
+    											}else{
+    											    $statsu="";
+    											}    
+    										?>
+    											<option value="<?php echo $row1['id'];?>" <?= $statsu; ?>><?php echo $row1['role_name'];?></option>
+    									<?php }} ?>	 
 									  </select>
 									</div>
-									<div class="form-group">
+									<div class="col-6 form-group">
 									  <label for="">User Designation</label>
 									  <input type="text" class="form-control" id="" name="designation" placeholder="User Designation" value="<?php echo $row['designation']; ?>" required>
 									</div>
-									<div class="form-group">
+									<div class="col-6 form-group">
 									  <label for="">Joining Date</label>
 									  <input type="date" class="form-control" id="" data-date-format="YYYY-MM-DD" name="join_date" placeholder="Join Date" value="<?php echo $row['joining']; ?>" required>
 									</div>
-									<div class="form-group">
+									<div class="col-6 form-group">
 									  <label for="">Alternate No </label>
 									  <input type="number" class="form-control" id="" name="aleternate_number" placeholder="Alternate Number" value="<?php echo $row['aleternate_number']; ?>" required>
 									</div>
-									<div class="form-group">
+									<div class="col-12 form-group">
 										<label>Permissions</label>
 										<br>
 										<input type="checkbox" name="permission[]" value="franchise" <?php if(in_array("franchise",$permissions)) { ?> checked="checked" <?php } ?> > Franchise Module
@@ -139,17 +137,27 @@ if(isset($_POST['submit'])){
 										<input type="checkbox" name="permission[]" value="schedular" <?php if(in_array("schedular",$permissions)) { ?> checked="checked" <?php } ?> > Schedular Module&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 										<input type="checkbox" name="permission[]" value="system" <?php if(in_array("system",$permissions)) { ?> checked="checked" <?php } ?> > System Data&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 									</div>
-									
-									
-								  <div class="box-footer text-right " >
-									<input type="submit" class="btn btn-outline-primary" name="submit" value="Submit">
-								  </div>
-					 </form>
-					 
-				</div>
-				</div>
-				</section>
-			</div>
-</div>
- </body>
- </html>
+									<div class="col-11"> &nbsp; </div>
+									 <div class="col-1">
+    									<div class="form-group">
+										    <label for=""> &nbsp;</label>
+										    <div class="input-group">
+										        <input type="submit" class="btn btn-primary btn-block" name="submit" value="Submit"> 
+										    </div> 
+										</div>
+									</div>									
+            					</div>
+                            </div> 
+                            </form>
+                        </div>  
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    </div>
+    
+<?php
+    require "footer1.php";
+?>

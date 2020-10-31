@@ -1,91 +1,81 @@
-	<?php include "header.php"?>
-		  <!-- /.navbar -->
-
-		  <!-- Main Sidebar Container -->
-		  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-			<!-- Brand Logo -->
-			<?php include("sidemenu.php");?>
-		  </aside>
-			<div class="content-wrapper">
-				<section class="content-header">
-				  <div class="container-fluid">
-					<div class="row mb-2">
-					  <div class="col-sm-12">
-						<ol class="breadcrumb float-sm-left">
-						  <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-						  <li class="breadcrumb-item"><a href="">Franchise Module</a></li>
-						  <li class="breadcrumb-item active">Target Reports</li>
-						</ol>
-						<?php echo $message; ?>
-					  </div>
-					</div>
-					<div class="row mb-2">
-					  <div class="col-sm-12">
-						<h4 style="text-align:center;"><b>Target Reports</b></h4>
-					  </div>
-					</div>
-				  </div><!-- /.container-fluid -->
-
-				</section>
-				
-			<section class="content">
-				<div class="card">
+<?php 
+require "header1.php";
+?>
+  <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Franchise Target Reports</h1>
+            <h4 style="color:red"><?php echo $message; ?></h4>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+              <li class="breadcrumb-item">Franchise </li>
+              <li class="breadcrumb-item active">Target Reports</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    
+    <section class="content">
+        <div class="container-fluid">
+		    <div class="card">
 				<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
 					<div class="card-body">
-					<div class="row">
-					    <div class="col-3">
-						<label>Select Country</label>
-						
-						<select class="form-control" name="country" id="country">
-							<option value=''>Select Country</option>
-							<?php include("config.php");
-    						$get = "select * from countries";
-    						$res = mysqli_query($conn,$get);
-    						if ($res){
-    							while($row=mysqli_fetch_assoc($res)){
-    						?>
-    										<option value="<?php echo $row['country_id'];?>"><?php echo $row['name'];?></option>
-    						<?php }} ?>
-						</select>
-						</div>
-						<div class="col-3">
-						<label>Select Type</label>
-						<select class="form-control" name="franchise_type" id="franchise_type" required>
-							<option value='0'>All</option>
-							<?php include("config.php");
-    						$get = "select * from franchise_type";
-    						$res = mysqli_query($conn,$get);
-    						if ($res){
-    							while($row=mysqli_fetch_assoc($res)){
-    						?>
-    							<option value="<?php echo $row['code'];?>"><?php echo $row['franchise'];?></option>
-    						<?php }} ?>	
-						</select>
-						</div>
-						
-						<div class="col-3">
-						    <label>Select Target Type</label>
-							  <select class="form-control" name="target_type" id="target_type" required>
-								<option>Select</option>
-								<option value="1">Yearly</option>
-								<option value="2">Monthly</option>
-								<option value="3">Quarterly</option>
-							  </select>
-						</div>
-						<div class="col-2" style="margin-top:3%">
-							<button type="submit" class="btn btn-outline-primary" name="search">Search</button>
-						</div>
+			    		<div class="row">
+				    	    <div class="col-3">
+					        	<label>Select Country</label>
+						        <select class="form-control" name="country" id="country">
+							        <option value=''>Select Country</option>
+							    <?php 
+            						$get = "select * from countries";
+            						$res = mysqli_query($conn,$get);
+            						if ($res){
+            							while($row=mysqli_fetch_assoc($res)){
+    						    ?>
+    							    <option value="<?php echo $row['country_id'];?>"><?php echo $row['name'];?></option>
+    						    <?php }} ?>
+						        </select>
+						    </div>
+						    <div class="col-3">
+    						    <label>Select Type</label>
+    						    <select class="form-control" name="franchise_type" id="franchise_type" required>
+    							    <option value='0'>All</option>
+    							<?php  
+        						    $get = "select * from franchise_type";
+        						    $res = mysqli_query($conn,$get);
+        						    if ($res){
+        							    while($row=mysqli_fetch_assoc($res)){
+        						?>
+        							<option value="<?php echo $row['code'];?>"><?php echo $row['franchise'];?></option>
+        						<?php }} ?>	
+    						    </select>
+						    </div>
+    						<div class="col-3">
+    						    <label>Select Target Type</label>
+    							  <select class="form-control" name="target_type" id="target_type" required>
+    								<option>Select</option>
+    								<option value="1">Yearly</option>
+    								<option value="2">Monthly</option>
+    								<option value="3">Quarterly</option>
+    							  </select>
+    						</div>
+    						<div class="col-2" style="margin-top:3%">
+    							<button type="submit" class="btn btn-outline-primary" name="search">Search</button>
+    						</div>
+				        </div>    
+				    </div>
 				</form>
-					</div>
-					</div>
-				</div>
-				
-				  <div class="card">
-				
-           
-			   <div class="card-body">
-					  
-					  <table id="example1" class="table table-bordered table-striped">
+			</div>            
+            <div class="card">
+                <div class="card-body table-responsive"> 
+<table id="example1" class="table table-bordered table-striped">
 					      <?php
 					        $target_type = $_POST['target_type'];
 					        if($target_type==1)
@@ -171,60 +161,17 @@
 						</tbody>
 						
 					  </table>
-					</div>
-				 
-			</div>
-			</section>
-			</div>
-
-
-<!-- DataTables -->
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
-<!-- ./wrapper -->
 
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- DataTables -->
-
-<script src="plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script> 
-<!-- FastClick -->
-<script src="plugins/fastclick/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
-<!-- page script -->
-
-<script>
-  $(function () {
-    $("#example1").DataTable({
-		"paging": true,
-      "lengthChange": true,
-      "searching": true,
-      "ordering": true,
-      "info": true,
-      "autoWidth": true,
-	});
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": true,
-      "searching": true,
-      "ordering": true,
-      "info": true,
-      "autoWidth": true,
-    });
-  });
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<?php
+require "footer1.php"
+?>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>  
+ 
 <script>
 /* $('#country').on('change', function() {
   var country = $('#country').val();
@@ -249,6 +196,4 @@
 		},
 	});
 }); */
-</script>
-</body>
-</html>
+</script> 

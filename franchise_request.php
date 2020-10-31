@@ -1,5 +1,4 @@
-<?php session_start(); ?>
-<?php
+<?php session_start();  
 $message = '';
 include("config.php");
 
@@ -122,66 +121,55 @@ if (isset($_POST['reject'])) {
         echo mysqli_error($conn);
     }
 }
+
+
+require "header1.php";
+
 ?>  
   <style>
   .di{ margin-right:18px;padding:6px;text-align:center;}
   
-  .pagination {
+ /* .pagination {
   color: black;
   float: left;
   padding: 8px 16px;
   text-decoration: none;
-}
+}*/
   
   </style>
-  
-
-<?php
-include "header.php";
-?>
-
-          <!-- /.navbar -->
-
-          <!-- Main Sidebar Container -->
-          <aside class="main-sidebar sidebar-dark-primary elevation-4">
-            <!-- Brand Logo -->
-            <?php include("sidemenu.php"); ?>
-         </aside>
-            <div class="content-wrapper">
-                 <section class="content-header">
-                  <div class="container-fluid">
-                    <div class="row mb-2">
-                      <div class="col-sm-12">
-                        <ol class="breadcrumb float-sm-left">
-                          <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                          <li class="breadcrumb-item"><a href="">Franchise Module</a></li>
-                          <li class="breadcrumb-item active">Request</li>
-                        </ol>
-                        <?php echo $message; ?>
-                     </div>
-                    </div>
-                    <div class="row mb-2">
-                      <div class="col-sm-12">
-                        <h4 style="text-align:center;"><b>Franchise Request</b></h4>
-                      </div>
-                    </div><!-- /.container-fluid -->
-                </section>
-                <section>
-                <div class="row">
-                    <div class="col-md-2 di" id="p">Request Pending
-                    </div>
-                    <div class="col-md-2 di" id="up">Under Process
-                    </div>                  
-                    <div class="col-md-2 di" id="a">Approval
-                    </div>
-                    <div class="col-md-2 di" id="add">Activated Franchise
-                    </div>
-                        <div class="col-md-2 di" id="r">Rejected Franchise
-                    </div>
-                </div>
-                
-  
-                </section>
+  <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Franchise Request</h1>
+            <h4 style="color:red"><?php echo $message; ?></h4>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+              <li class="breadcrumb-item">Franchise </li>
+              <li class="breadcrumb-item active">Franchise Request</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 di" id="p">Request Pending </div>
+                <div class="col-md-2 di" id="up">Under Process </div>                  
+                <div class="col-md-2 di" id="a">Approval </div>
+                <div class="col-md-2 di" id="add">Activated Franchise </div>
+                <div class="col-md-2 di" id="r">Rejected Franchise </div>
+            </div>
+        </div>
+    </section>
             <section class="content" id="pending">
     
                   <div class="card">
@@ -711,7 +699,6 @@ while ($row_francha = mysqli_fetch_array($res_francha)) {
                 
             </div>
             </section>
-            
             <section class="content" id="rejected">
     
                   <div class="card">
@@ -803,258 +790,174 @@ while ($row_francha = mysqli_fetch_array($res_francha)) {
                 
             </div>
             </section>
-            </div>
-            
 
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"><b>Forward Comments</b></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <form action="<?php
-echo $_SERVER['PHP_SELF'];
-?>" method="POST">
-      <div class="modal-body">
-        <input type="text"  class="form-control" placeholder="Enter Comments" name="reason" required autocomplete="off" size="10" >
-        <input type="hidden" name="forward_id" id="forward_id" class="form-control">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        <!--button type="button" class="btn btn-primary">Ok</button-->
-        <input type="submit" name="forward" class="btn btn-primary" value="Submit">
-      </div>
-      </form>
-    </div>
-  </div>
-</div>
-
-
-
-<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"><b>Reject Comments</b></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <form action="<?php
-echo $_SERVER['PHP_SELF'];
-?>" method="POST">
-      <div class="modal-body">
-        <input type="text"  class="form-control" placeholder="Enter Comments" name="reason" required autocomplete="off" size="10" >
-        <input type="hidden" name="reject_id" id="reject_id" class="form-control">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        <!--button type="button" class="btn btn-primary">Ok</button-->
-        <input type="submit" name="reject" class="btn btn-primary" value="Ok">
-      </div>
-      </form>
-    </div>
-  </div>
-</div>
-
-
-
-<div class="modal fade" id="verifyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"><b> Verify OTP and Approve Franchise Request. </b></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-      <div class="modal-body">
-          <div class="row">
-            <div class="col-md-6">
-                <div class="col-md-12">
-                  <label class="label">Country Franchise Commissions</label>
-                </div>
-                <div class="col-md-12">
-                    <input type="text"  class="form-control" name="country_franch_commission" id="country_franch_commission" readonly>
-                </div>                
-            </div>
-            <div class="col-md-6">
-                <div class="col-md-12">
-                  <label class="label">Country Sales Incharge</label>
-                </div>
-                <div class="col-md-12">
-                    <input type="text"  class="form-control" name="country_sales_incharge" id="country_sales_incharge" readonly>
-                </div>                
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"><b>Forward Comments</b></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <form action="<?php  echo $_SERVER['PHP_SELF']; ?>" method="POST">
+              <div class="modal-body">
+                <input type="text"  class="form-control" placeholder="Enter Comments" name="reason" required autocomplete="off" size="10" >
+                <input type="hidden" name="forward_id" id="forward_id" class="form-control">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <!--button type="button" class="btn btn-primary">Ok</button-->
+                <input type="submit" name="forward" class="btn btn-primary" value="Submit">
+              </div>
+              </form>
             </div>
           </div>
-
-          <div class="row">
-            <div class="col-md-6">
-                <div class="col-md-12">
-                  <label class="label">State Sales Incharge</label>
-                </div>
-                <div class="col-md-12">
-                    <input type="text"  class="form-control" name="state_sales_incharge" id="state_sales_incharge" readonly>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="col-md-12">
-                  <label class="label">Approved Person </label>
-                </div>
-                <div class="col-md-12">
-                    <input type="text"  class="form-control" name="approved_person" id="approved_person" readonly>
-                </div>              
-            </div>
-          </div>
-
-
-          <div class="row">
-            <div class="col-md-6">
-                <div class="col-md-12">
-                  <label class="label"> Appointed Date</label>
-                </div>
-                <div class="col-md-12">
-                    <input type="date"  class="form-control" name="appointment_date" id="appointment_date" required autocomplete="off" >
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="col-md-12">
-                  <label class="label"> Renewal Date</label>
-                </div>
-                <div class="col-md-12">
-                    <input type="date"  class="form-control" name="renewal_date" id="renewal_date" required autocomplete="off" >
-                </div>
+        </div>
+        
+        <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"><b>Reject Comments</b></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <form action="<?php  echo $_SERVER['PHP_SELF']; ?>" method="POST">
+              <div class="modal-body">
+                <input type="text"  class="form-control" placeholder="Enter Comments" name="reason" required autocomplete="off" size="10" >
+                <input type="hidden" name="reject_id" id="reject_id" class="form-control">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <!--button type="button" class="btn btn-primary">Ok</button-->
+                <input type="submit" name="reject" class="btn btn-primary" value="Ok">
+              </div>
+              </form>
             </div>
           </div>
-
-
-
-          <div class="row">
-            <div class="col-md-6">
-                <div class="col-md-12">
-                  <label class="label"> Mr.Vinod OTP</label>
-                </div>
-                <div class="col-md-12">
-                    <input type="text"  class="form-control" placeholder="Enter Mr.Vinod OTP" name="verifyotp1" id="verifyotp1" required autocomplete="off" maxlength="4"  >
-                </div>             
-            </div>    
-            <div class="col-md-6">
-                <div class="col-md-12">
-                  <label class="label"> Mr.Murali OTP</label>
-                </div>
-                <div class="col-md-12">
-                    <input type="text"  class="form-control" placeholder="Enter Mr.Murali OTP" name="verifyotp2" id="verifyotp2" required autocomplete="off" maxlength="4" >
-                </div>
-            </div>
-
+        </div>
+        
+        <div class="modal fade" id="verifyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"><b> Verify OTP and Approve Franchise Request. </b></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-
-          <div class="row">
-                 <div class="col-md-12">
-                  <label class="label"> Franchise Commissions</label>
+          <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+          <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6">
+                    <div class="col-md-12">
+                      <label class="label">Country Franchise Commissions</label>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="text"  class="form-control" name="country_franch_commission" id="country_franch_commission" readonly>
+                    </div>                
                 </div>
-                <div class="col-md-12">
-                    <input type="text"  class="form-control" placeholder="Enter Franchise Commision" name="franch_commission" id="franch_commission" required autocomplete="off" size="10" >
-                    <input type="hidden" name="verifyto" id="verifyto" class="form-control">
-                    <input type="hidden" name="verify_referal_id" id="verify_referal_id" class="form-control" >
-                    <input type="hidden" name="verify_agreed_amount" id="verify_agreed_amount" class="form-control" >
-                </div>             
-          </div>          
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        <!--button type="button" class="btn btn-primary">Ok</button-->
-        <input type="button" name="verify" class="btn btn-success" value="Verify & Approve" onclick="verifyotpapprove()">
-      </div>
-      </form>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-<!-- DataTables -->
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
-
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- DataTables -->
-
-<script src="plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script> 
-  
-<!-- FastClick -->
-<script src="plugins/fastclick/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
-<!-- page script -->
-
-<script type="text/javascript">
-
-  $(function () {
-    $("#example1").DataTable({
-      "paging": true,
-      "lengthChange": true,
-      "searching": true,
-      "ordering": true,
-      "info": true,
-      "autoWidth": true,
-    });
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": true,
-      "searching": true,
-      "ordering": true,
-      "info": true,
-      "autoWidth": true,
-    });
-     $('#example3').DataTable({
-      "paging": true,
-      "lengthChange": true,
-      "searching": true,
-      "ordering": true,
-      "info": true,
-      "autoWidth": true,
-    });
-    $('#example4').DataTable({
-      "paging": true,
-      "lengthChange": true,
-      "searching": true,
-      "ordering": true,
-      "info": true,
-      "autoWidth": true, 
-    });
-    $('#example5').DataTable({
-      "paging": true,
-      "lengthChange": true,
-      "searching": true,
-      "ordering": true,
-      "info": true,
-      "autoWidth": true,
-      
-    });    
+                <div class="col-md-6">
+                    <div class="col-md-12">
+                      <label class="label">Country Sales Incharge</label>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="text"  class="form-control" name="country_sales_incharge" id="country_sales_incharge" readonly>
+                    </div>                
+                </div>
+              </div>
     
-  });
-</script>
+              <div class="row">
+                <div class="col-md-6">
+                    <div class="col-md-12">
+                      <label class="label">State Sales Incharge</label>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="text"  class="form-control" name="state_sales_incharge" id="state_sales_incharge" readonly>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="col-md-12">
+                      <label class="label">Approved Person </label>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="text"  class="form-control" name="approved_person" id="approved_person" readonly>
+                    </div>              
+                </div>
+              </div>
+    
+    
+              <div class="row">
+                <div class="col-md-6">
+                    <div class="col-md-12">
+                      <label class="label"> Appointed Date</label>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="date"  class="form-control" name="appointment_date" id="appointment_date" required autocomplete="off" >
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="col-md-12">
+                      <label class="label"> Renewal Date</label>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="date"  class="form-control" name="renewal_date" id="renewal_date" required autocomplete="off" >
+                    </div>
+                </div>
+              </div>
+    
+    
+    
+              <div class="row">
+                <div class="col-md-6">
+                    <div class="col-md-12">
+                      <label class="label"> Mr.Vinod OTP</label>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="text"  class="form-control" placeholder="Enter Mr.Vinod OTP" name="verifyotp1" id="verifyotp1" required autocomplete="off" maxlength="4"  >
+                    </div>             
+                </div>    
+                <div class="col-md-6">
+                    <div class="col-md-12">
+                      <label class="label"> Mr.Murali OTP</label>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="text"  class="form-control" placeholder="Enter Mr.Murali OTP" name="verifyotp2" id="verifyotp2" required autocomplete="off" maxlength="4" >
+                    </div>
+                </div>
+    
+              </div>
+    
+              <div class="row">
+                     <div class="col-md-12">
+                      <label class="label"> Franchise Commissions</label>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="text"  class="form-control" placeholder="Enter Franchise Commision" name="franch_commission" id="franch_commission" required autocomplete="off" size="10" >
+                        <input type="hidden" name="verifyto" id="verifyto" class="form-control">
+                        <input type="hidden" name="verify_referal_id" id="verify_referal_id" class="form-control" >
+                        <input type="hidden" name="verify_agreed_amount" id="verify_agreed_amount" class="form-control" >
+                    </div>             
+              </div>          
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <!--button type="button" class="btn btn-primary">Ok</button-->
+            <input type="button" name="verify" class="btn btn-success" value="Verify & Approve" onclick="verifyotpapprove()">
+          </div>
+          </form>
+        </div>
+            </div>
+        </div>
+</div>
+    
+<?php
+require "footer1.php"
+?>
+
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -1439,5 +1342,4 @@ function verifyotpapprove(){
         
 }
 </script>
-</body>
-</html>
+

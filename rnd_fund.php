@@ -1,46 +1,35 @@
 <?php 
-include("config.php");
-include "header.php";
-
+  
 $message ="";
 if(isset($_POST['search'])){
 	$country_id = $_POST['country_id'];
 }else{
 	$country_id = '';
 }
+
+ require "header1.php";
+
 ?>  
-
-
-		  <!-- /.navbar -->
-
-		  <!-- Main Sidebar Container -->
-		  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-			<!-- Brand Logo -->
-			<?php include("sidemenu.php");?>
-		  </aside>
-			<div class="content-wrapper">
-			
-				<section class="content-header">
-				  <div class="container-fluid">
-					<div class="row mb-2">
-					  <div class="col-sm-12">
-						<ol class="breadcrumb float-sm-left">
-						  <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-						  <li class="breadcrumb-item"><a href="">Accounts Module</a></li>
-						  <li class="breadcrumb-item active">RND Fund</li>
-						</ol>
-						<?php echo $message; ?>
-					  </div>
-					</div>
-					<div class="row mb-2">
-					  <div class="col-sm-12">
-						<h4 style="text-align:center;"><b>RND Fund</b></h4>
-					  </div>
-					</div>
-				  </div><!-- /.container-fluid -->
-
-				</section>
-				
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">RND Fund </h1>
+            <h4 ><?php echo $message; ?></h4>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+              <li class="breadcrumb-item">Accounts Module </li>
+              <li class="breadcrumb-item active">RND Fund </li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div> 
+ 
 				
 				<section class="content">
 
@@ -120,7 +109,7 @@ if(isset($_POST['search'])){
 						</tr>
 						</thead>
 						<tbody id="result">
-					        <?php
+					      <!--  <?php
 					            $i=0;
 					            $sql = "SELECT r.*, c.name as countryname, s.name as statename, u.name as username FROM rndfund r, countries c, state s, users u where r.state=s.zone_id and c.country_id=r.country and u.id=r.user_id";
 					            $result = mysqli_query($conn,$sql);
@@ -128,15 +117,15 @@ if(isset($_POST['search'])){
 					            { ?>
 					            <tr>
 					                <?php $i++; ?>
-					                <td><?php echo $i; ?></td>
-					                <td><?php echo $row['username']; ?></td>
-					                <td><?php echo $row['countryname']; ?></td>
-					                <td><?php echo $row['statename']; ?></td>
-					                <td><?php echo $row['amount']; ?></td>
-					                <td><?php echo $row['payment_for']; ?></td>
-					                <td><?php echo $row['payment_date']; ?></td>
+					                <td><?php  $i; ?></td>
+					                <td><?php  $row['username']; ?></td>
+					                <td><?php  $row['countryname']; ?></td>
+					                <td><?php  $row['statename']; ?></td>
+					                <td><?php  $row['amount']; ?></td>
+					                <td><?php  $row['payment_for']; ?></td>
+					                <td><?php  $row['payment_date']; ?></td>
 					           </tr>     
-					       <?php } ?>
+					       <?php } ?>-->
 						</tbody>
 						<tfoot>
 							
@@ -147,47 +136,16 @@ if(isset($_POST['search'])){
 				 
 			</div>
 			</section>
-			</div>
 
-
-<!-- DataTables -->
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
-
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- DataTables -->
-
-<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+ </div>
+<?php
+require "footer1.php"
+?>
 <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script> 
-<!-- FastClick -->
-<script src="plugins/fastclick/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
-<!-- page script -->
-<script>
-  $(function () {
-    $("#example1").DataTable();
+ 
+ 
 
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-    });
-  });
+<script type="text/javascript">
 
 function getState(){
 	var country_id = $("#country_id").val();
@@ -204,7 +162,7 @@ function getState(){
 			url : "get_state.php",
 			data : {id : country_id},
 			success: function(resdata){
-			   console.log(resdata);
+			   //console.log(resdata);
 			   $('#state_id').empty();
 			   $('#state_id').append(resdata);
 			}
@@ -222,7 +180,7 @@ function getdata(){
 			data : {country_id : country_id,state_id : state_id},
 			success: function(resdata){
 			   //alert(resdata);
-			   console.log(resdata);
+			   //console.log(resdata);
 			   $('#result').empty();
 			   $('#result').append(resdata);
 			}

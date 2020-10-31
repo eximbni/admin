@@ -1,152 +1,145 @@
 <?php 
-include("config.php");
-include "header.php";
-
-$message ="";
-if(isset($_POST['search'])){
-	$county_name = $_POST['county_id'];
-	$chapter_id = $_POST['chapter_id'];
-	$type_name = $_POST['type'];
-	$display_country = $_POST['country'];	
-	
-
-}else{
-	$county_name = '';
-	$planid = '';
-	$type_name = '';
-	$display_country = '';	
-}
+   session_start();
+   include("config.php");
+   $message ="";
+   require "header1.php";
+    if(isset($_POST['search'])){
+    	$county_name = $_POST['county_id'];
+    	$chapter_id = $_POST['chapter_id'];
+    	$type_name = $_POST['type'];
+    	$display_country = $_POST['country'];	
+    	
+    
+    }else{
+    	$county_name = '';
+    	$planid = '';
+    	$type_name = '';
+    	$display_country = '';	
+    } 
+    
 ?>  
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+   <!-- Content Header (Page header) -->
+   <div class="content-header">
+      <div class="container-fluid">
+         <div class="row mb-2">
+            <div class="col-sm-6">
+               <h1 class="m-0 text-dark">Posted Lead Report</h1>
+               <h4 style="color:red"><?php echo $message; ?></h4>
+            </div>
+            <!-- /.col -->
+            <div class="col-sm-6">
+               <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                  <li class="breadcrumb-item">Leads </li>
+                  <li class="breadcrumb-item active">Posted Lead Report</li>
+               </ol>
+            </div>
+            <!-- /.col -->
+         </div>
+         <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+   </div>
 
-
-		  <!-- /.navbar -->
-
-		  <!-- Main Sidebar Container -->
-		  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-			<!-- Brand Logo -->
-			<?php include("sidemenu.php");?>
-		  </aside>
-			<div class="content-wrapper">
-				<section class="content-header">
-				  <div class="container-fluid">
-					<div class="row mb-2">
-					  <div class="col-sm-12">
-						<ol class="breadcrumb float-sm-left">
-						  <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-						  <li class="breadcrumb-item"><a href="">Admin Leads Module</a></li>
-						  <li class="breadcrumb-item active">Posted Lead Details</li>
-						</ol>
-					  </div>
-					</div>
-					<div class="row mb-2">
-					  <div class="col-sm-12">
-						<h4 style="text-align:center;"><b>Posted Lead Details</b></h4>
-					  </div>
-					</div>
-				  </div><!-- /.container-fluid -->
-
-				</section>
-				
 			<section class="content">
 				<div class="card">
-				<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-					<div class="card-body">
-					<div class="row">
-						<div class="col-3">
-						<label>Select Posted Country</label>
-						
-						<select class="form-control" name="county_id" id="county_id">
-							<option value=''>Select Country</option>
-							<?php
-							include("config.php");
-							$get_country = "SELECT * FROM `countries`";
-							$res_country = mysqli_query($conn,$get_country);
-							while($row_country=mysqli_fetch_array($res_country))
-							{
-							    if($county_name == $row_country['country_id']){
-							       echo "<option value=".$row_country['country_id']." selected>".$row_country['name']."</option>"; 
-							    }else{
-							       echo "<option value=".$row_country['country_id'].">".$row_country['name']."</option>"; 
-							    }
-								
-							}						
-							?>
-						</select> 
-						</div>					    
-					    
-					    
-						<div class="col-3">
-						<label>Select Type</label>
-						<select class="form-control" name="type" id="type">
-							<?php
-							if(isset($_POST['search']))
-							{
-								$lead_type=$_POST['type']; ?>
-								<option value="<?php echo $lead_type; ?>"><?php echo $lead_type; ?></option>
-							<?php } ?>
-							<option value="">Select Type</option>
-							<option value="Buy">Buy</option>
-							<option value="Sell">Sell</option>
-						</select>
-						</div>
-						<div class="col-3">
-						<label>Select Display Country</label>
-						
-						<select class="form-control" name="country" id="country">
-							<option value=''>Select Country</option>
-							<?php 
-							$get_country = "SELECT * FROM `countries`";
-							$res_country = mysqli_query($conn,$get_country);
-							while($row_country=mysqli_fetch_array($res_country))
-							{
-							    if($display_country == $row_country['country_id']){
-							       echo "<option value=".$row_country['country_id']." selected >".$row_country['name']."</option>";
-							    }else{
-							       echo "<option value=".$row_country['country_id'].">".$row_country['name']."</option>";
-							    }
-								
-							}						
-							?>
-						</select>
-						</div>
-						<div class="col-3">
-						<label>Select Chapter</label>
-						
-						<select class="form-control" name="chapter_id" id="chapter_id">
-							<option value=''>Select Chapters</option>
-							<?php
-							$get_chapters = "SELECT * FROM `chapters`";
-							$res_chapters = mysqli_query($conn,$get_chapters);
-							while($row_chapters=mysqli_fetch_array($res_chapters))
-							{
-							    
-							    if($chapter_id == $row_chapters['id']){
-							       	echo "<option value=".$row_chapters['id']." selected>".$row_chapters['chapter_name']."</option>";
-							    }else{
-							       	echo "<option value=".$row_chapters['id'].">".$row_chapters['chapter_name']."</option>";
-							    }							    
-							
-							}						
-							?>
-						</select>
-						</div>						
-						
-						<div class="col-4" style="margin-top:3%">
-							<button type="submit" class="btn btn-outline-primary" name="search">Search</button>
-						</div>
-				</form>
-					</div>
-					</div>
+    				<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+    					<div class="card-body">
+    					<div class="row">
+    						<div class="col-3">
+    						<label>Select Posted Country</label>
+    						
+    						<select class="form-control" name="county_id" id="county_id">
+    							<option value=''>Select Country</option>
+    							<?php
+    							include("config.php");
+    							$get_country = "SELECT * FROM `countries`";
+    							$res_country = mysqli_query($conn,$get_country);
+    							while($row_country=mysqli_fetch_array($res_country))
+    							{
+    							    if($county_name == $row_country['country_id']){
+    							       echo "<option value=".$row_country['country_id']." selected>".$row_country['name']."</option>"; 
+    							    }else{
+    							       echo "<option value=".$row_country['country_id'].">".$row_country['name']."</option>"; 
+    							    }
+    								
+    							}						
+    							?>
+    						</select> 
+    						</div>					    
+    					    
+    					    
+    						<div class="col-3">
+    						<label>Select Type</label>
+    						<select class="form-control" name="type" id="type">
+    							<?php
+    							if(isset($_POST['search']))
+    							{
+    								$lead_type=$_POST['type']; ?>
+    								<option value="<?php echo $lead_type; ?>"><?php echo $lead_type; ?></option>
+    							<?php } ?>
+    							<option value="">Select Type</option>
+    							<option value="Buy">Buy</option>
+    							<option value="Sell">Sell</option>
+    						</select>
+    						</div>
+    						<div class="col-3">
+    						<label>Select Display Country</label>
+    						
+    						<select class="form-control" name="country" id="country">
+    							<option value=''>Select Country</option>
+    							<?php 
+    							$get_country = "SELECT * FROM `countries`";
+    							$res_country = mysqli_query($conn,$get_country);
+    							while($row_country=mysqli_fetch_array($res_country))
+    							{
+    							    if($display_country == $row_country['country_id']){
+    							       echo "<option value=".$row_country['country_id']." selected >".$row_country['name']."</option>";
+    							    }else{
+    							       echo "<option value=".$row_country['country_id'].">".$row_country['name']."</option>";
+    							    }
+    								
+    							}						
+    							?>
+    						</select>
+    						</div>
+    						<div class="col-3">
+    						<label>Select Chapter</label>
+    						
+    						<select class="form-control" name="chapter_id" id="chapter_id">
+    							<option value=''>Select Chapters</option>
+    							<?php
+    							$get_chapters = "SELECT * FROM `chapters`";
+    							$res_chapters = mysqli_query($conn,$get_chapters);
+    							while($row_chapters=mysqli_fetch_array($res_chapters))
+    							{
+    							    
+    							    if($chapter_id == $row_chapters['id']){
+    							       	echo "<option value=".$row_chapters['id']." selected>".$row_chapters['chapter_name']."</option>";
+    							    }else{
+    							       	echo "<option value=".$row_chapters['id'].">".$row_chapters['chapter_name']."</option>";
+    							    }							    
+    							
+    							}						
+    							?>
+    						</select>
+    						</div>						
+    						
+    						<div class="col-4" style="margin-top:3%">
+    							<button type="submit" class="btn btn-outline-primary" name="search">Search</button>
+    						</div>
+    				</form>
+    					</div>
+    					</div>
+    				</form>
 				</div>
-
-	</section>	
+            </section>	
 			
 			<section class="content">
-    
-				  <div class="card">
-				
-           
-			   <div class="card-body" style="overflow:scroll" >
+                <div class="card">
+                    <div class="card-body" style="overflow:scroll" >
 					  <table id="example1" class="table table-bordered table-striped">
 						<thead>
 						<tr>
@@ -327,50 +320,15 @@ if(isset($_POST['search'])){
 						</tbody>
 					  </table>
 					</div>
-				 
-			</div>
+				</div>
 			</section>
-			</div>
-
-
-<!-- DataTables -->
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
+			
 </div>
-<!-- ./wrapper -->
-
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- DataTables -->
-<script src="plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script> 
-<!-- FastClick -->
-<script src="plugins/fastclick/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
-<!-- page script -->
-<script>
-  $(function () {
-    $("#example1").DataTable();
-
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-    });
-  });
-</script>
+<?php
+   require "footer1.php"
+   ?>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script> 
+ 
 <script>
 $('#cont_id').on('change', function() {
   var cont_id = $('#cont_id').val();
@@ -416,6 +374,4 @@ $('#reg_id').on('change', function() {
 		},
 	});
 });
-</script>
-</body>
-</html>
+</script> 

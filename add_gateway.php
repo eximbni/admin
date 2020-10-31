@@ -1,5 +1,6 @@
 <?php
-	include("config.php");
+session_start();
+include("config.php");
 $msg ='';
 $meeting_id ='';
 $meeting_pass = '';
@@ -188,7 +189,7 @@ $uploaddir = '../api/uploads/';
 						<?php
 						$todaysdate = date("Y-m-d");
 						$i=1;
-						$sql_expo = "select * from payment_gateway ORDER BY id";
+						$sql_expo = "select p.*, c.name as country from payment_gateway p, countries c where p.gateway_country = c.country_id ORDER BY p.id";
 						$res_expo = mysqli_query($conn,$sql_expo);
 						while($row_expo = mysqli_fetch_array($res_expo))
 						{
@@ -198,12 +199,12 @@ $uploaddir = '../api/uploads/';
 					   <tr>
 						    <td><?php echo $i; ?></td>
 						    <td><?php echo $row_expo['gateway_name']; ?></td>
-						    <td><?php echo $row_expo['gateway_country']; ?></td>
+						    <td><?php echo $row_expo['country']; ?></td>
 						    <td><?php echo $row_expo['gateway_folder']; ?></td>
 						    <td><?php echo $row_expo['gateway_page_path']; ?> </td>
 						    <td>
 								<input type="hidden" id="gname<?= $id;?>" value="<?= $row_expo['gateway_name'];?>" >
-								<input type="hidden" id="gcountry<?= $id;?>" value="<?= $row_expo['gateway_country'];?>" >
+								<input type="hidden" id="gcountry<?= $id;?>" value="<?= $row_expo['country'];?>" >
 								<input type="hidden" id="gfolder<?= $id;?>" value="<?= $row_expo['gateway_folder'];?>" >
 								<input type="hidden" id="gpagepath<?= $id;?>" value="<?= $row_expo['gateway_page_path'];?>" >
 								<button type="button" onclick="showmodal(<?= $id;?>,<?= $status;?>)" class="btn btn-outline-info ">Edit</button>						        

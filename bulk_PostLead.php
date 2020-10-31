@@ -1,6 +1,5 @@
-<?php
-$message="";
-//$conn = mysqli_connect("localhost", "root", "", "test");
+<?php 
+$message=""; 
 include("config.php");
 include("fcmpush.php");
 if(isset($_POST['import'])) 
@@ -206,44 +205,30 @@ if($res_lead)
     }
     
 }
-?>
-<!DOCTYPE html>
-<html>
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
-	<link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
-</head>
-<body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
 
-<?php include("header.php")?>
-		  <!-- /.navbar -->
+ require "header1.php";
 
-		  <!-- Main Sidebar Container -->
-	<aside class="main-sidebar sidebar-dark-primary elevation-4"> <?php include("sidemenu.php");?>  </aside>
-	<div class="content-wrapper">
-
-	<section class="content-header">
-		<div class="container-fluid">
-			<div class="row mb-2">
-				<div class="col-sm-12" id="response" class="<?php if(!empty($type)) { echo $type . " display-block"; } ?>">
-				<ol class="breadcrumb float-sm-left">
-				  	<li class="breadcrumb-item"><a href="index.php">Home</a></li>
-				  	<li class="breadcrumb-item"><a href="">Lead Module</a></li>
-				  	<li class="breadcrumb-item active">Bulk Lead Post</li>
-					</ol>
-					<?php echo $message; ?>
-			  	</div>
-			</div>
-			<div class="row mb-2">
-			  <div class="col-sm-12">
-				<h4 style="text-align:center;"><b>Bulk Lead Post </b></h4>
-			  </div>
-			</div>
-		</div><!-- /.container-fluid -->
-	</section>
-				
-		
+?>  
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Bulk Post Leads</h1>
+            <h4 ><?php echo $message; ?></h4>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+              <li class="breadcrumb-item">Lead Model </li>
+              <li class="breadcrumb-item active">Bulk Post Leads </li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    
 	<section class="content">
     
 		<div class="card p-3">
@@ -377,9 +362,13 @@ if($res_lead)
 
 	</section>
 
-	</div>
-
 </div>
+<?php
+require "footer1.php"
+?>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+ 
+ 
 
 <script type="text/javascript">
 $(document).ready(function() {
@@ -467,6 +456,3 @@ $('#continent').on('change', function() {
 	});
 });
 </script>
-
- </body>
- </html>

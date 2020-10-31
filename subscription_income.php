@@ -1,7 +1,5 @@
 <?php 
-include("config.php");
-include "header.php";
-
+include("config.php"); 
 $message ="";
 if(isset($_POST['search'])){
 	$countryid = $_POST['country_id'];
@@ -11,101 +9,87 @@ if(isset($_POST['search'])){
 	$countryid = '';
 	$planid = '';
 }
+
+require "header1.php";
+
 ?>  
-
-
-		  <!-- /.navbar -->
-
-		  <!-- Main Sidebar Container -->
-		  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-			<!-- Brand Logo -->
-			<?php include("sidemenu.php");?>
-		  </aside>
-			<div class="content-wrapper">
-				<section class="content-header">
-				  <div class="container-fluid">
-					<div class="row mb-2">
-					  <div class="col-sm-12">
-						<ol class="breadcrumb float-sm-left">
-						  <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-						  <li class="breadcrumb-item"><a href="">Accounts Module</a></li>
-						  <li class="breadcrumb-item active">Subscription Income</li>
-						</ol>
-						<?php echo $message; ?>
-					  </div>
-					</div>
-					<div class="row mb-2">
-					  <div class="col-sm-12">
-						<h4 style="text-align:center;"><b>Subscription Income</b></h4>
-					  </div>
-					</div>
-				  </div><!-- /.container-fluid -->
-
-				</section>
-				
-				<section class="content">
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Subscription Income</h1>
+            <h4 ><?php echo $message; ?></h4>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+              <li class="breadcrumb-item">Account Model </li>
+              <li class="breadcrumb-item active">Subscription Income</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+			<section class="content">
 				<div class="card">
 				<h4 ><?php echo $message ?></h4>	
-				<div class="card-body">
-				<form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" >			
-				  <div class="box-body">
-				  <div class="row">
-					<div class="col-md-6">
-						<div class="form-group">
-						  <label>Select Country</label>
-						  <select class="form-control" name="country_id" id="country_id" onchange="get_plandetail(this.value)">
-							<option value=""> --Select Country-- </option>
-							<?php
-							$sql_countries ="SELECT country_id, name FROM `countries`";
-							$query_countries = mysqli_query($conn, $sql_countries);
-							while($res_countries = mysqli_fetch_array($query_countries)){
-								if($countryid == $res_countries['country_id']){
-									$status ="selected";
-								}else{
-									$status ="";
-								}
-							?>
-							<option value="<?= $res_countries['country_id']?>" <?= $status;?>>	<?= $res_countries['name']?></option>
-							<?php
-							}
-							?>
-							
-						  </select>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="form-group">
-		                <label for="exampletenant_plotno">Select Plan Name</label>
-		                <select name="plan_id" id="plan_id" class="form-control">
-		                  <option value=""> --Select Plan-- </option> 
-		                </select>
-
-						</div>
-
-					</div>
-								
-				</div>
-					  <!-- /.box-body -->
-
-				  <div class="box-footer text-right mb-3" >
-					<button type="submit" name="search" id="search" class="btn btn-outline-primary" onclick="return checkValidation()">Search</button>
-				  </div>
-		 </form>
-		 
-		 
-	</div>
-	</div>
-	</section>
+    				<div class="card-body">
+        				<form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" >			
+            				<div class="box-body">
+            				    <div class="row">
+            					    <div class="col-md-6">
+            						<div class="form-group">
+            						  <label>Select Country</label>
+            						  <select class="form-control" name="country_id" id="country_id" onchange="get_plandetail(this.value)">
+            							<option value=""> --Select Country-- </option>
+            							<?php
+            							$sql_countries ="SELECT country_id, name FROM `countries`";
+            							$query_countries = mysqli_query($conn, $sql_countries);
+            							while($res_countries = mysqli_fetch_array($query_countries)){
+            								if($countryid == $res_countries['country_id']){
+            									$status ="selected";
+            								}else{
+            									$status ="";
+            								}
+            							?>
+            							<option value="<?= $res_countries['country_id']?>" <?= $status;?>>	<?= $res_countries['name']?></option>
+            							<?php
+            							}
+            							?>
+            							
+            						  </select>
+            						</div>
+            					</div>
+            					    <div class="col-md-6">
+            						<div class="form-group">
+            		                <label for="exampletenant_plotno">Select Plan Name</label>
+            		                <select name="plan_id" id="plan_id" class="form-control">
+            		                  <option value=""> --Select Plan-- </option> 
+            		                </select>
+            
+            						</div>
+            
+            					</div>
+            				    </div>
+                            </div>
+        				  <div class="box-footer text-right mb-3" >
+        					<button type="submit" name="search" id="search" class="btn btn-outline-primary" onclick="return checkValidation()">Search</button>
+        				  </div>
+        		        </form>
+	                </div>
+	            </div>
+	        </section>
 
 
 
-			<section class="content">
+		<section class="content">
     
-				  <div class="card">
-				
-           
-			   <div class="card-body">
-					  <table id="example1" class="table table-bordered table-striped">
+            <div class="card">
+			    <div class="card-body">
+				    <table id="example1" class="table table-bordered table-striped">
 						<thead>
 						<tr>
 						  <th>Sr.No</th>
@@ -181,69 +165,19 @@ if(isset($_POST['search'])){
 						</tfoot>
 
 					  </table>
-					</div>
-				 
+				</div>
 			</div>
-			</section>
-			</div>
-
-
-<!-- DataTables -->
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
-
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- DataTables -->
-
-<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+		</section>
+	
+	</div>
+<?php
+require "footer1.php"
+?>
 <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script> 
-
-<!-- FastClick -->
-<script src="plugins/fastclick/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
-<!-- page script -->
+ 
+ 
+ 
 <script>
-  $(function () {
-    $("#example1").DataTable();
-
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-    });
-  });
-
-/*
-function get_projectdetail(countryid){
-  //alert(countryid);
-  $.ajax({
-    type:"post",
-    url : "ajaxGetPlanName.php",
-    data : {countryid : countryid },
-    success: function(plandata){
-      // alert(plandata);
-       $('#plan_id').html(plandata);
-    }
-  }); 
-
-} 
-*/
-
 function get_plandetail(countryid){
   //alert(countryid);
   $.ajax({

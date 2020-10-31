@@ -8,6 +8,6 @@
 	{
 		$div .= "<option value='".$row_state['zone_id']."'>".$row_state['name']."</option>";
 	} 
-	echo json_encode($div);
-	//echo $div;
+	//echo json_encode($div);
+	echo $div;
 ?>

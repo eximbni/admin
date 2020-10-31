@@ -1,7 +1,5 @@
 <?php 
-include("config.php");
-include "header.php";
-
+include("config.php"); 
 $message ="";
 if(isset($_POST['search'])){
 	$country_id = $_POST['country_id'];
@@ -11,41 +9,32 @@ if(isset($_POST['search'])){
 	$country_id = '';
 	$lead_type = '';
 }
+
+
+require "header1.php";
+
 ?>  
-
-
-		  <!-- /.navbar -->
-
-		  <!-- Main Sidebar Container -->
-		  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-			<!-- Brand Logo -->
-			<?php include("sidemenu.php");?>
-		  </aside>
-			<div class="content-wrapper">
-			
-				<section class="content-header">
-				  <div class="container-fluid">
-					<div class="row mb-2">
-					  <div class="col-sm-12">
-						<ol class="breadcrumb float-sm-left">
-						  <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-						  <li class="breadcrumb-item"><a href="">Accounts Module</a></li>
-						  <li class="breadcrumb-item active">Lead Income</li>
-						</ol>
-						<?php echo $message; ?>
-					  </div>
-					</div>
-					<div class="row mb-2">
-					  <div class="col-sm-12">
-						<h4 style="text-align:center;"><b>Lead Income</b></h4>
-					  </div>
-					</div>
-				  </div><!-- /.container-fluid -->
-
-				</section>
-				
-				
-				<section class="content">
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Lead Income</h1>
+            <h4 ><?php echo $message; ?></h4>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+              <li class="breadcrumb-item">Account Model </li>
+              <li class="breadcrumb-item active">Lead Income</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+			<section class="content">
 
 				<div class="card">
 				<h4 ><?php echo $message ?></h4>	
@@ -97,6 +86,7 @@ if(isset($_POST['search'])){
 		 
 		 
 	</div>
+	            </form>
 	</div>
 	</section>
 
@@ -204,64 +194,16 @@ if(isset($_POST['search'])){
 			</div>
 			</section>
 			</div>
+            </section>
+    </div>
 
-
-<!-- DataTables -->
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
-
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- DataTables -->
-
-<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<?php
+require "footer1.php"
+?>
 <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script> 
 
-<!-- FastClick -->
-<script src="plugins/fastclick/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
-<!-- page script -->
 <script>
-  $(function () {
-    $("#example1").DataTable();
-
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-    });
-  });
-
-/*
-function get_projectdetail(countryid){
-  //alert(countryid);
-  $.ajax({
-    type:"post",
-    url : "ajaxGetPlanName.php",
-    data : {countryid : countryid },
-    success: function(plandata){
-      // alert(plandata);
-       $('#plan_id').html(plandata);
-    }
-  }); 
-
-} 
-*/
-
+ 
 function get_plandetail(countryid){
   //alert(countryid);
   $.ajax({

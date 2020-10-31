@@ -63,7 +63,7 @@ if($_SESSION['email']=='' && $_SESSION['user_id']=='')
 	}
   </style>
   
-</head>
+
  <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->

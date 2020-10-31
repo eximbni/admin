@@ -1,8 +1,10 @@
 <?php
+session_start();
+include("config.php");
 $message="";
 if(isset($_POST['submit']))
 {
-    include("config.php");
+    
     date_default_timezone_set("Asia/Calcutta");
     $date = date('Y-m-d');
     $country_id = $_POST['country_id'];
@@ -33,63 +35,44 @@ if(isset($_POST['submit']))
     	$message = "<div class='alert alert-danger'>Failed to update policy.</div>";
     }
 }
+
+require "header1.php";
 ?>
-<!DOCTYPE html>
-<html>
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
-	<link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
-</head>
-<body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
-
-			<?php include("header.php")?>
-		  <!-- /.navbar -->
-
-		  <!-- Main Sidebar Container -->
-		  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-			<!-- Brand Logo -->
-			<?php include("sidemenu.php");?>
-		  </aside>
-	<div class="content-wrapper">
-		<section class="content-header">
-		  <div class="container-fluid">
-			<div class="row mb-2">
-			  <div class="col-sm-12">
-				<ol class="breadcrumb float-sm-left">
-				  <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-				  <li class="breadcrumb-item active">Add Policy</li>
-				</ol>
-				
-			  </div>
-			</div>
-			<div class="row mb-2">
-			  <div class="col-sm-9">
-				<h4 style="text-align:center;"><b>Add Policy</b></h4>
-			  </div>
-			  <div class="col-sm-3">
-			  
-			  </div>
-			</div>
-		  </div><!-- /.container-fluid -->
-
-		</section>
-				
-			<?php echo $message; ?>
-			
-	    <section class="content">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Add Policy </h1>
+             <?= $message; ?>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+              <li class="breadcrumb-item">Admin User </li>
+              <li class="breadcrumb-item active">Add Policy</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
     
-	        <div class="card p-3">
-							
-	            <div class="container">
-	
-                	<form role="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-                        <div class="box-body">
-                		    <div class="row">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-body"> 
+                        <div class="  ">
+            				<form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" >
+            				<input type="hidden" name="country_id" class="form-control" value="<?php echo $_SESSION['country']; ?>">
+                                                    <div class="box-body">
+                		 <div class="row">
                 			<div class="col-md-6">
                 			    <div class="form-group">
                 				  <label>Country</label>
-                				  <select class="form-control" name="country_id" required>
+                				  <select class="form-control" name="country_id" id="Country" required>
                 					<option>select</option>
                 					<?php include("config.php");
                 						$get = "select * from countries";
@@ -165,14 +148,27 @@ if(isset($_POST['submit']))
                 			</div>
                 		  <!-- /.box-body -->
                 		</div>
+                	    </div>
                 		  <div class="box-footer text-right mb-3" >
                 			<button type="submit" class="btn btn-outline-primary" name="submit">Submit</button>
                 		  </div>
-                	</form>
+                            </form>
+                        </div>  
+                </div>
             </div>
         </div>
+    </section>
+       
     </div>
-</div>
+    
+<?php
+    require "footer1.php";
+?>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<!--
+<script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+<link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
+-->
 
 <script>
 $('#category').on('change', function() {
@@ -199,11 +195,13 @@ $('#category').on('change', function() {
 
 $('#chapter').on('change', function() {
   var a = $('#chapter').val();
+  var c = $('#Country').val();
   $.ajax({
 		type:"POST",
 		url:"get_hsncode.php",
 		data:{
-			id:a
+			id:a,
+			country_id:c
 		},
 		dataType:'json',
 		success:function(response)
@@ -277,6 +275,4 @@ $('#continent').on('change', function() {
 $('form').on('blur', 'input[type=number]', function (e) {
   $(this).off('wheel.disableScroll')
 })
-</script>
-</body>
-</html>
+</script> 

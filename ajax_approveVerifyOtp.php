@@ -59,7 +59,7 @@
                 $agreed_amount = $res_fr_status['agreed_amount'];
                 
                 
-                $sql_franch1 = "SELECT fr.*,frt.franchise,frt.code,u.name,u.mobile,u.email,u.id as user_id FROM franchise_request fr, franchise_type frt, users u WHERE fr.franchise_type_id=frt.id and fr.user_id=u.id and fr.request_id='$request_id'";
+                $sql_franch1 = "SELECT fr.*,frt.franchise,frt.code,u.name, u.mobile, u.password, u.email,u.id as user_id FROM franchise_request fr, franchise_type frt, users u WHERE fr.franchise_type_id=frt.id and fr.user_id=u.id and fr.request_id='$request_id'";
                 $res_franch1 = mysqli_query($conn, $sql_franch1);
                 $row = mysqli_fetch_array($res_franch1);
             
@@ -73,6 +73,7 @@
                 $franchise_type_id = $row['franchise_type_id'];
                 $code = $row["code"]; 
                 $request_id = $row["request_id"];
+                $password = $row['password'];
                 
                 if($franchise_type_id == 2){
                     $frcode = "SF-".$country_id."-".$state_id ;
@@ -82,7 +83,7 @@
                 
                 $refnumber = $code."-".rand(11111111,99999999);
           
-                $password = md5('123456');
+                //$password = md5('123456');
                 $ins = "insert into franchise_users (user_id,password,name,mobile,email,franchise_type,country_id,state_id,commission,amount,frcode,status,created_date,expiry_date) values('$user_id', '$password','$name','$mobile','$uemail','$code', '$country_id', '$state_id','$franch_commission','$agreed_amount','$frcode','1','$appointment_date','$renewal_date')";
                  $resins = mysqli_query($conn, $ins);
     
@@ -136,7 +137,23 @@
                             $payment_date = date("Y-m-d");
                             $cfcom = "insert into frachise_accounts (user_id,franchise_id,amount,payment_for,payment_date,status) values ('$user_id','$franchise_id','$cfamount','franchise deposit','$payment_date','0')";
                             $rscf = mysqli_query($conn, $cfcom);
-                        
+    
+                            $sql_frwallet = mysqli_query($conn, "SELECT balance FROM `franchise_wallet` WHERE franchise_id ='$franchise_id' AND status ='1'");
+                            $num_frwallet = mysqli_num_rows($sql_frwallet);
+                            if($num_frwallet > 0){
+                                $res_frwallet = mysqli_fetch_array($sql_frwallet);
+                                $frwallet = $res_frwallet['balance'];
+                            }else{
+                                $frwallet = 0;
+                            }
+                            
+                            $update_balance = floatval($frwallet) + floatval($cfamount);
+                            
+                            $fr_wallet = "insert into franchise_wallet (franchise_id,wallet,balance,payment_date,status) values ('$franchise_id','$cfamount','$update_balance','$payment_date','1')";
+                            $res_fr_wallet = mysqli_query($conn, $fr_wallet);
+    
+                            
+                            
                         }
                         
                         $payment_date = date("Y-m-d");
@@ -149,7 +166,7 @@
                         $exim_amount  = $agreed_amount;
                         $eximcom = "insert into eximfund (user_id,state_id,country_id,payment_for,amount,status,payment_date) values ('$user_id','$state_id','$country_id','franchise deposit','$exim_amount','1','$payment_date')";
                         $resexim = mysqli_query($conn, $eximcom);
-                                                                    
+                        
                     }
                     
                             

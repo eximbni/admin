@@ -1,7 +1,39 @@
 <?php
+include("config.php");
 $message='';
+
+if(isset($_POST['activate'])){
+    $adminuserid = $_POST['act_adminuserid'];
+    
+    $update_sql = "UPDATE admin_users SET status='1' WHERE id ='$adminuserid' ";
+    $update_res = mysqli_query($conn,$update_sql);
+	if($update_res){
+		$message = "<h4 style='color:green'> Admin User Activated Successfully </h4>";
+	}
+	else{
+		$message = "<h4 style='color:red'> Error activating admin user </h4>";
+		echo mysqli_error($conn);
+	}    
+    
+}
+
+if(isset($_POST['delete'])){
+    $adminuserid = $_POST['del_adminuserid'];
+    
+    $update_sql = "UPDATE admin_users SET status='0' WHERE id ='$adminuserid' ";
+    $update_res = mysqli_query($conn,$update_sql);
+	if($update_res){
+		$message = "<h4 style='color:green'> Admin User Deleted Successfully </h4>";
+	}
+	else{
+		$message = "<h4 style='color:red'> Error deleting admin user </h4>";
+		echo mysqli_error($conn);
+	}    
+    
+}
+
 if(isset($_POST['submit'])){
-	include("config.php");
+    
 	$username=$_POST['username'];
 	$mobile=$_POST['mobile'];
 	$email=$_POST['email'];
@@ -13,15 +45,15 @@ if(isset($_POST['submit'])){
 	$checkbox1=$_POST['permission'];  
 	$count = count($_POST['permission']);
 	$selected1="";
-	if($role==3)
+	if($role=='3')
 	{
 	    $country_id=$_POST['country_id'];
 	    $state_id=$_POST['state_id'];
 	}
 	else
     {
-	    $country_id='';
-	    $state_id='';
+	    $country_id='0';
+	    $state_id='0';
 	}
 	
 	foreach($checkbox1 as $selected)  
@@ -39,77 +71,64 @@ if(isset($_POST['submit'])){
 	//echo $sql;
 	$res = mysqli_query($conn,$sql);
 	if($res){
-		$message = "User Added Successfully";
+		$message = "<h4 style='color:green'> User Added Successfully </h4>";
 	}
 	else{
-		$message = "Error adding User";
+		$message = "<h4 style='color:red'> Error adding User </h4>";
 		echo mysqli_error($conn);
 	}
 	}
 }
+require "header1.php";
 ?>
-<!DOCTYPE html>
-<html>
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  
-</head>
-<body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
-
-			<?php include("header.php")?>
-		  <!-- /.navbar -->
-
-		  <!-- Main Sidebar Container -->
-		  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-			<!-- Brand Logo -->
-			<?php include("sidemenu.php");?>
-		  </aside>
-			<div class="content-wrapper">
-			
-				<section class="content-header">
-				  <div class="container-fluid">
-					<div class="row mb-2">
-					  <div class="col-sm-12">
-						<ol class="breadcrumb float-sm-left">
-						  <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-						  <li class="breadcrumb-item"><a href="">Admin User Module</a></li>
-						  <li class="breadcrumb-item active">Create User</li>
-						</ol>
-					  </div>
-					</div>
-					<div class="row mb-2">
-					  <div class="col-sm-12">
-						<h4 style="text-align:center;"><b>Create User</b></h4>
-					  </div>
-					</div>
-				  </div><!-- /.container-fluid -->
-	
-				</section>
-				
-				
-				<section>
-				<h2 style="color:red"><?php echo $message; ?></h2>
-				<div class="card p-3">
-				<div class="container">
-					<form role="form" action="<?php echo $_SERVER['PHP-SELF']; ?>" method="POST">
-									
-									<div class="form-group">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Add New Admin User</h1>
+            <?php echo $message; ?> 
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+              <li class="breadcrumb-item">Admin User </li>
+              <li class="breadcrumb-item active">Add New Admin User</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-body"> 
+                        <div class="  ">
+            				<form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" >
+            				<input type="hidden" name="country_id" class="form-control" value="<?php echo $_SESSION['country']; ?>">
+                            <div class="box-body">
+                                <div class="row">
+									<div class="col-6 form-group">
 									  <label for="">Username </label>
 									  <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
 									</div>
-									<div class="form-group">
+									<div class="col-6 form-group">
 									  <label for="">Mobile No </label>
 									  <input type="number" class="form-control" id="" name="mobile" placeholder="Mobile No" required>
 									</div>
-									<div class="form-group">
+									<div class="col-6 form-group">
 									  <label for="">Email </label>
 									  <input type="email" class="form-control" id="" name="email" placeholder="Email" required>
 									</div>
-									<div class="form-group">
+									<div class="col-6 form-group">
 									  <label for="">Password </label>
 									  <input type="password" class="form-control" name="password" id="" placeholder="******" required>
 									</div>
-									<div class="form-group">
+									<div class="col-6 form-group">
 									  <label>Role</label>
 									  <select class="form-control" name="role" id="role" required onchange="checkrole();">
 										<option>select</option>
@@ -123,18 +142,12 @@ if(isset($_POST['submit'])){
 									<?php }} ?>	
 										
 									  </select>
-									  <!--select class="form-control" name="role">
-									  <option>Select Role</option>
-										<option>Super Admin</option>
-										<option>Admin</option>
-										<option>User</option>
-									  </select-->
 									</div>
-									<div class="form-group" id="country" style="display:none;">
+									<div class="col-6 form-group" id="country" style="display:none;">
 									  <label for="">Country</label>
 									  <select class="form-control" name="country_id" id="country_id" onchange="getState();" required>
 											<option>Select</option>
-											<?php include("config.php");
+											<?php 
                     						$get = "select * from countries";
                     						$res = mysqli_query($conn,$get);
                     						if ($res){
@@ -144,25 +157,25 @@ if(isset($_POST['submit'])){
                     						<?php }} ?>	
 										  </select>
 									</div>
-									<div class="form-group" id="state" style="display:none;">
+									<div class="col-6 form-group" id="state" style="display:none;">
 									  <label>Select State</label>
 									  <select class="form-control" name="state_id" id="state_id">
 										
 									  </select>
 									</div>
-									<div class="form-group">
+									<div class="col-6 form-group">
 									  <label for="">User Designation</label>
 									  <input type="text" class="form-control" id="" name="designation" placeholder="User Designation" required>
 									</div>
-									<div class="form-group">
+									<div class="col-6 form-group">
 									  <label for="">Joining Date</label>
 									  <input type="date" class="form-control" id="" data-date-format="YYYY-MM-DD" name="join_date" placeholder="Join Date" required>
 									</div>
-									<div class="form-group">
+									<div class="col-6 form-group">
 									  <label for="">Alternate No </label>
 									  <input type="number" class="form-control" id="" name="aleternate_number" placeholder="Alternate Number"required>
 									</div>
-									<div class="form-group">
+									<div class="col-12 form-group">
 										<label>Permissions</label>
 										<br>
 										<input type="checkbox" name="permission[]" value="franchise" unchecked> Franchise Module
@@ -179,19 +192,109 @@ if(isset($_POST['submit'])){
 										<input type="checkbox" name="permission[]" value="schedular" unchecked> Schedular Module&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 										<input type="checkbox" name="permission[]" value="system" unchecked> System Data&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 									</div>
-									
-									
-								  <div class="box-footer text-right " >
-									<input type="submit" class="btn btn-outline-primary" name="submit" value="Submit">
-								  </div>
-					 </form>
-					 
-				</div>
-				</div>
-				</section>
-			</div>
-</div>
- </body>
+									<div class="col-11"> &nbsp; </div>
+									 <div class="col-1">
+    									<div class="form-group">
+										    <label for=""> &nbsp;</label>
+										    <div class="input-group">
+										        <input type="submit" class="btn btn-primary btn-block" name="submit" value="Submit"> 
+										    </div> 
+										</div>
+									</div>									
+            					</div>
+                            </div> 
+                            </form>
+                        </div>  
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    <h5> Admin Users List</h5>
+                </div>
+                <div class="card-body"> 
+                        <div class="table-responsive">
+            				<table id="example1" class="table table-bordered table-striped">
+        						<thead>
+        						<tr>
+        						  <th>Sr.No</th>
+        						  <th>Name</th>
+        						  <th>Mobile</th>
+        						  <th>Email</th>
+        						  <th>Designation</th>
+        						  <th>Status</td>
+        						  <th >Action</th>
+        						</tr>
+        						</thead>
+        						<tbody>
+        						<?php
+        						$sql_chk = "SELECT * FROM `admin_users`";
+        						//echo $sql_chk;
+        						$query_chkres = mysqli_query($conn,$sql_chk);
+        						if(mysqli_num_rows($query_chkres)>0){
+        						$srno = 1;	
+        							while($rows1 = mysqli_fetch_array($query_chkres)){
+        							    if($rows1['status'] =='1'){
+        							        $status ="Active";
+        							    }else{
+        							        $status= "Inactive";
+        							    }
+        						?>	
+        						   	<tr>
+        							  <td align="center"><?= $srno; ?></td>
+        							  <td align="left"><?= $rows1['name']; ?></td>
+        							  <td align="left"><?= $rows1['mobile']; ?></td>
+        							  <td align="left"><?= $rows1['email']; ?></td>
+        							  <td align="left"><?= $rows1['designation']; ?></td>
+        							  <td align="center"><?= $status; ?></td>
+        							  <td>
+        							        <a class="btn btn-warning btn-sm" href="edit_user.php?id=<?php echo $rows1['id']; ?>">Edit</a> &nbsp;
+        							    <?php
+        							       if($rows1['status'] =='1'){
+        							    ?>
+        							        <form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" >
+        							            <input type="hidden" id="del_adminuserid"  name ="del_adminuserid" value="<?= $rows1['id']; ?>" >
+        							            <input type="submit" class="btn btn-danger btn-sm"  name ="delete" value="Del" >
+        							        </form>        							    
+        							    <?php
+        							    }else{
+        							    ?>
+        							        <form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" >
+        							            <input type="hidden" id="act_adminuserid"  name ="act_adminuserid" value="<?= $rows1['id']; ?>" >
+        							            <input type="submit" class="btn btn-success btn-sm"  name ="activate" value="Activate" >
+        							        </form>         							    
+        							    <?php
+        							    }
+        							    ?> 
+        							   </td>
+        							</tr>
+        						<?php
+        							$srno++;
+        							}
+        						}
+        						else{
+        
+        						}
+        						?>
+        						</tbody>
+    					    </table>
+                        </div>  
+                </div>
+               
+            </div>
+        </div>
+    </section>    
+    </div>
+    
+<?php
+    require "footer1.php";
+?> 
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+
  <script>
  function getState()
  {
@@ -231,5 +334,4 @@ if(isset($_POST['submit'])){
          document.getElementById('state').style.display = "none";
      }
  }
- </script>
- </html>
+ </script> 

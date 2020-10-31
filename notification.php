@@ -1,4 +1,5 @@
 <?php
+session_start();
 date_default_timezone_set("Asia/Calcutta");
 $date = date('Y-m-d h:m:s');
 if(isset($_POST['submit']))

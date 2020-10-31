@@ -1,7 +1,7 @@
 <?php
 	include ("config.php");
 	$country_id = $_POST['country_id'];
-	if(isset($_POST['state_id']))
+	if($_POST['state_id']!='')
 	{
 	    //$state_id = $_POST['state_id'];
 	    $state_id = "AND e.state_id ='".$_POST['state_id']."'";
@@ -10,8 +10,18 @@
 	{
 	    $state_id = '';
 	}
+	
+	if($_POST['country_id']!='')
+	{
+	    $country_id = "AND e.country_id ='".$_POST['country_id']."'";
+	}
+	else
+	{
+	    $country_id = '';
+	}	
+	
 	$srno = 0;
-	$admin_income ="SELECT e.*, c.name as countryname, s.name as statename, u.name as username FROM eximfund e, countries c, state s, users u where e.state_id=s.zone_id and c.country_id=e.country_id and u.id=e.user_id and e.country_id='$country_id' $state_id ";
+	$admin_income ="SELECT e.*, c.name as countryname, s.name as statename, u.name as username FROM eximfund e, countries c, state s, users u where e.state_id=s.zone_id and c.country_id=e.country_id and u.id=e.user_id  $country_id  $state_id ";
 	$res_admin_income = mysqli_query($conn, $admin_income);
 	$count_admin_income = mysqli_num_rows($res_admin_income);
 	if($count_admin_income > 0){

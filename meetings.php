@@ -1,6 +1,7 @@
-  
-
-			<?php include "header.php"?>
+  <?php
+  session_start();
+  ?>
+  <?php include "header.php"?>
 		  <!-- /.navbar -->
 
 		  <!-- Main Sidebar Container -->

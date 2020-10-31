@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $msg ='';
 $meeting_id ='';
 $meeting_pass = '';
@@ -28,7 +28,9 @@ if(isset($_POST['submit'])){
 	$res = mysqli_query($conn,$sql);
 	if($res){
 		$message = "Webinar Schedule Added Successfully";
-		
+		$link = "https://eximbni.com/miivision";
+		$idmessage = $meeting_id;
+		$password = $meeting_pass;
 	}
 	else{
 		$error_message = "Failed To Add Webinar. ". mysqli_error($conn);
@@ -103,7 +105,7 @@ if(isset($_POST['submit'])){
 									      <div class="col-md-3">
 									          <input type="time" name="schedule_time" id="schedule_time" onkeydown="return event.keyCode != 69" class="form-control" >
 									          <input type="hidden" name="scheduletime" id="scheduletime" class="form-control" >
-									          <input type="text" name="user_id" id="user_id" class="form-control" value="<?= $_SESSION['user_id'];?>" >
+									          <input type="hidden" name="user_id" id="user_id" class="form-control" value="<?= $_SESSION['user_id'];?>" >
 									       </div>
 									  </div>
 									</div>
@@ -153,7 +155,7 @@ if(isset($_POST['submit'])){
 								    <div class="col-md-6">
 								        <div class="form-group">
 									  <label for="">Meeting ID</label>
-									   <input type="text" name="meeting_id" id="meeting_id" class="form-control" value="<?php echo rand(111111,999999);?>" style="width:50% !important">
+									   <input type="text" name="meeting_id" id="meeting_id" class="form-control" value="MiiVision_<?php echo rand(111111,999999);?>" style="width:50% !important">
 									</div>
 								    </div>
 								</div>
@@ -212,7 +214,7 @@ if(isset($_POST['submit'])){
                             <strong > URL </strong>
                         </div>
                         <div class="col-md-8">
-                            : <a href="https://eximbin.com/videoconference/" target="_blank" > https://eximbin.com/videoconference/</a>
+                            : <a href="https://eximbni.com/miivision/" target="_blank" > https://eximbni.com/miivision/</a>
                         </div>
                     </div>
                 </div>

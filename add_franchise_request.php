@@ -1,10 +1,8 @@
 <?php 
-
+include("config.php");
 $message='';
 
 if(isset($_POST['submit'])){
-
-	include("config.php");
 
 	$country_id = $_POST['country_id'];
 
@@ -59,98 +57,44 @@ if(isset($_POST['submit'])){
 	}
 
 }
-
+require "header1.php";
 ?>
-
-<!DOCTYPE html>
-
-<html>
-
-<head>
-
-  
-
-</head>
-
-<body class="hold-transition sidebar-mini layout-fixed">
-
-<div class="wrapper">
-
-			<?php include("header.php")?>
-
-		  <!-- /.navbar -->
-
-		  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-
-			<!-- Brand Logo -->
-
-			<?php include("sidemenu.php");?>
-
-		  </aside>
-
-		 
-
-			<div class="content-wrapper">
-
-				<section class="content-header">
-
-				  <div class="container-fluid">
-
-					<div class="row mb-2">
-
-					  <div class="col-sm-6">
-
-						<h4 class="m-0 text-dark">Add Franchise</h4>
-
-						
-
-					  </div>
-
-					  <div class="col-sm-6">
-
-						<ol class="breadcrumb float-sm-right">
-
-						  <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-
-						  <li class="breadcrumb-item active">Add Franchise</li>
-
-						</ol>
-
-					  </div>
-
-					</div>
-
-				  </div><!-- /.container-fluid -->
-
-				</section>
-
-				<section>
-
-				<h2 style="color:red"><?php echo $message; ?></h2>
-
-				<div class="card p-3">
-
-		
-
-				<div class="container">
-
-						<form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" >
-
-						<input type="hidden" name="country_id" class="form-control" value="<?php echo $_SESSION['country']; ?>">
-
-								  <div class="box-body">
-
-								  <div class="row">
-
-									<div class="col-md-6">
-										<div class="form-group">
-
-										  <label for="">mobile</label>
-
-										  <input type="number" name="mobile" class="form-control" onkeydown="return event.keyCode != 69" id="" placeholder="Mobile" required>
-
-										</div>
-
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Add Franchise</h1>
+            <h4 style="color:red"><?php echo $message; ?></h4>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+              <li class="breadcrumb-item">Franchise </li>
+              <li class="breadcrumb-item active">Add Franchise </li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-body"> 
+                        <div class="  ">
+            				<form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" >
+            				<input type="hidden" name="country_id" class="form-control" value="<?php echo $_SESSION['country']; ?>">
+                            <div class="box-body">
+                                <div class="row">
+            					    <div class="col-md-6">
+            						    <div class="form-group">
+            							    <label for="">mobile</label>
+             							    <input type="number" name="mobile" class="form-control" onkeydown="return event.keyCode != 69" id="" placeholder="Mobile" required>
+                                        </div>
 										<div class="form-group">
 
 										  <label>Select Franchise Type</label>
@@ -178,7 +122,6 @@ if(isset($_POST['submit'])){
 										  </select>
 
 										</div>
-										
 										<div class="form-group" id="continent" style="display:none;"> 
 
 										  <label>Select Continent</label>
@@ -206,7 +149,6 @@ if(isset($_POST['submit'])){
 										  </select>
 
 										</div>
-										
 										<div class="form-group" id="regional" style="display:none;"> 
 
 										  <label>Select Region</label>
@@ -217,7 +159,6 @@ if(isset($_POST['submit'])){
 										  </select>
 
 										</div>
-
 										<div class="form-group">
 
 										  <label>Select Country</label>
@@ -245,7 +186,6 @@ if(isset($_POST['submit'])){
 										  </select>
 
 										</div>
-
 										<div class="form-group">
 
 										  <label>Select Chapter</label>
@@ -273,34 +213,20 @@ if(isset($_POST['submit'])){
 										  </select>
 
 										</div>
-
-											<div class="form-group">
+										<div class="form-group">
 
 										  <label for="">Name</label>
 
 										  <input type="text" name="name" class="form-control" onkeydown="return event.keyCode != 69" id="" placeholder="Name" required>
 
 										</div>
-
-										
-
-										
-
-									</div>
-
-								
-
-								<div class="col-md-6">
-
-									<div class="form-group">
-
-									  <label for="">email</label>
-
-									  <input type="text" name="email" class="form-control" onkeydown="return event.keyCode != 69" id="" placeholder="email" required>
-
-									</div>
-
-										<div class="form-group">
+                                    </div>
+            						<div class="col-md-6">
+    									<div class="form-group">
+                                            <label for="">email</label>
+                                            <input type="text" name="email" class="form-control" onkeydown="return event.keyCode != 69" id="" placeholder="email" required>
+                                        </div>
+                                        <div class="form-group">
 
 										  <label>Select State</label>
 
@@ -311,7 +237,6 @@ if(isset($_POST['submit'])){
 										  </select>
 
 										</div>
-
 										<div class="form-group">
 
 										  <label for="">Commission</label>
@@ -319,7 +244,6 @@ if(isset($_POST['submit'])){
 										  <input type="number" name="commission" class="form-control" onkeydown="return event.keyCode != 69" id="" placeholder="Commission" required>
 
 										</div>
-
 										<div class="form-group">
 
 										  <label for="">Franchise Amount</label>
@@ -327,7 +251,6 @@ if(isset($_POST['submit'])){
 										  <input type="number"name="amount" class="form-control" onkeydown="return event.keyCode != 69" id="" placeholder="Franchise Amount" required>
 
 										</div>
-
 										<div class="form-group">
 
 										  <label for="">Expiry Date</label>
@@ -336,49 +259,30 @@ if(isset($_POST['submit'])){
 
 										</div>
 
-									</div>
+            						</div>
+            					</div>
+                            </div>
+            				<div class="box-footer text-right">
+            					<input type="submit" name="submit"class="btn btn-outline-primary" value="submit">
+                            </div>
+                             </form>
+                        </div>  
+                </div>
+            </div>
 
-								</div>
-
-									 <div class="box-footer text-right">
-
-									<input type="submit" name="submit"class="btn btn-outline-primary" value="submit">
-
-								  </div>
-
-									
-
-								  </div>
-
-								  <!-- /.box-body -->
-
+        </div>
+    </section>
+    </div>
 
 
-								 
-
-					 </form>
-
-					 
-
-					 
-
-				</div>
-
-				</div>
-
-				</section>
-
-			</div>
-
-</div>
-
- </body>
-
+<?php
+require "footer1.php";
+?> 
  <script>
 
 $('#franchise_type').on('change', function() {
   var a = $('#franchise_type').val();
-  alert(a);
+ // alert(a);
   if(a=="CNTF")
   {
 	  $('#continent').css('display','block');
@@ -461,5 +365,3 @@ $('#continent_id').on('change', function() {
  }
 
  </script>
-
- </html>

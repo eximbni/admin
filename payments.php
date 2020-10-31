@@ -1,42 +1,33 @@
-  
-
-			<?php include("header.php")?>
-		  <!-- /.navbar -->
-
-		  <!-- Main Sidebar Container -->
-		  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-			<!-- Brand Logo -->
-			<?php include("sidemenu.php");?>
-		  </aside>
-			<div class="content-wrapper">
-				<div class="container">
-				<section class="content-header">
-				  <div class="container-fluid">
-					<div class="row mb-2">
-					  <div class="col-sm-12">
-						<ol class="breadcrumb float-sm-left">
-						  <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-						  <li class="breadcrumb-item"><a href="">Franchise Module</a></li>
-						  <li class="breadcrumb-item active">Payments</li>
-						</ol>
-						<?php echo $message; ?>
-					  </div>
-					</div>
-					<div class="row mb-2">
-					  <div class="col-sm-12">
-						<h4 style="text-align:center;"><b>Payments</b></h4>
-					  </div>
-					</div>
-				  </div><!-- /.container-fluid -->
-	
-				</section>
-			<section class="content">
-			<div class="row">
-			<div class="col-12">
-			<div class="card">
-            
-            <div class="card-body">
-              <table id="example1" class="table table-bordered table-striped">
+<?php 
+require "header1.php";
+?>
+  <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Franchise Payments</h1>
+            <h4 style="color:red"><?php echo $message; ?></h4>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+              <li class="breadcrumb-item">Franchise </li>
+              <li class="breadcrumb-item active">Franchise Payments</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-body table-responsive"> 
+                    <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>Franchise</th>
@@ -48,8 +39,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                    <?php
-								include("config.php");
+                    <?php 
 								$sql_franch = "SELECT fa.*, fr.email, fr.amount as payment,fr.country_id,fr.name, c.name as country from frachise_accounts fa, franchise_users fr,countries c  where fa.franchise_id=fr.id and fr.country_id=c.country_id";
 								$res_franch = mysqli_query($conn,$sql_franch);
 								while($row_franch=mysqli_fetch_array($res_franch))
@@ -67,35 +57,14 @@
                 </tbody>
                 
               </table>
+                </div>
             </div>
-            <!-- /.card-body -->
-          </div>
-          </div>
-          </div>
-          </section>
-
-				</div>
-			</div>
+        </div>
+    </section>
 </div>
- </body>
 
-<!-- DataTables -->
-
-<script src="plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script> 
-
- <script>
-  $(function () {
-    $('#example1').DataTable()
-    $('#example2').DataTable({
-      'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
-      'ordering'    : true,
-      'info'        : true,
-      'autoWidth'   : false
-    })
-  })
-</script>
- </html>
+<?php
+require "footer1.php"
+?> 
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script> 
+ 

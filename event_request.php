@@ -47,50 +47,43 @@ $message='';
 			//echo mysqli_error($conn);
 		}
 	}
+require "header1.php";	
 ?>  
   <style>
   .di{ margin-right:38px;padding:6px;text-align:center;}
   </style>
-
-			<?php include "header.php"?>
-		  <!-- /.navbar -->
-
-		  <!-- Main Sidebar Container -->
-		  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-			<!-- Brand Logo -->
-			<?php include("sidemenu.php");?>
-		  </aside>
-			<div class="content-wrapper">
-				 <section class="content-header">
-				  <div class="container-fluid">
-					<div class="row mb-2">
-					  <div class="col-sm-12">
-						<ol class="breadcrumb float-sm-left">
-						  <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-						  <li class="breadcrumb-item"><a href="">Franchise Module</a></li>
-						  <li class="breadcrumb-item active">Event Request</li>
-						</ol>
-						<?php echo $message; ?>
-					  </div>
-					</div>
-					<div class="row mb-2">
-					  <div class="col-sm-12">
-						<h4 style="text-align:center;"><b>Event Request</b></h4>
-					  </div>
-					</div><!-- /.container-fluid -->
-				</section>
-				<section>
-				<div class="row p-2">
-					<div class="col-md-2 di" id="p">Pending
-					</div>
-					<div id="a" class="col-md-2 di ">Approved
-					</div>
-					<div class="col-md-2 di" id="r">Rejected
-					</div>
-				</div>
-				 
-  
-				</section>
+  <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Franchise Event Request</h1>
+            <h4 style="color:red"><?php echo $message; ?></h4>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+              <li class="breadcrumb-item">Franchise </li>
+              <li class="breadcrumb-item active">Event Request</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    
+    <section class="content">
+        <div class="container-fluid">
+			<div class="row p-2">
+				<div class="col-md-2 di" id="p">Pending	</div>
+				<div id="a" class="col-md-2 di ">Approved </div>
+				<div class="col-md-2 di" id="r">Rejected </div>
+			</div> 
+        </div>
+    </section>
+ 
 			<section class="content" id="pending">
     
 				  <div class="card">
@@ -254,35 +247,33 @@ $message='';
 					</div>
 				 
 			</div>
-			</section>
-			</div>
-			
+			</section>    
 		
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
+        <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel"><b>Approved Request</b></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-	  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-		<label>Approved Budget</label>
-		<input type="number" name="app_budget" onkeydown="return event.keyCode !=69" class="form-control" placeholder="Enter Approved Budget" required>
-		<input type="hidden" name="approve_id" id="approve_id" class="form-control">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        <!--button type="button" class="btn btn-primary">Ok</button-->
-		<?php if(isset($_POST['approve'])) { ?>
-			<input type="submit" name="approve" class="btn btn-primary" value="Ok" disabled>
-		<?php }else{?>
-			<input type="submit" name="approve" class="btn btn-primary" value="Ok">
-		<?php } ?>
-		</form>
-      </div>
+        <div class="modal-body">
+	        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+		        <label>Approved Budget</label>
+		        <input type="number" name="app_budget" onkeydown="return event.keyCode !=69" class="form-control" placeholder="Enter Approved Budget" required>
+		        <input type="hidden" name="approve_id" id="approve_id" class="form-control">
+		    </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <!--button type="button" class="btn btn-primary">Ok</button-->
+    		<?php if(isset($_POST['approve'])) { ?>
+    			<input type="submit" name="approve" class="btn btn-primary" value="Ok" disabled>
+    		<?php }else{?>
+    			<input type="submit" name="approve" class="btn btn-primary" value="Ok">
+    		<?php } ?>
+        </div>
     </div>
   </div>
 </div>
@@ -310,68 +301,14 @@ $message='';
 	  </form>
     </div>
   </div>
-</div>-->
-
-<!-- DataTables -->
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
+</div>-->    
 </div>
-<!-- ./wrapper -->
 
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- DataTables -->
-<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<?php
+require "footer1.php"
+?>
 <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script> 
-<!-- FastClick -->
-<script src="plugins/fastclick/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
-<!-- page script -->
-<script>
-  $(function () {
-    $("#example1").DataTable({
-	  "paging": true,
-      "lengthChange": true,
-      "searching": true,
-      "ordering": true,
-      "info": true,
-      "autoWidth": true,
-	});
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": true,
-      "searching": true,
-      "ordering": true,
-      "info": true,
-      "autoWidth": true,
-    });
-	 $('#example3').DataTable({
-      "paging": true,
-      "lengthChange": true,
-      "searching": true,
-      "ordering": true,
-      "info": true,
-      "autoWidth": true,
-    });
-	$('#example4').DataTable({
-      "paging": true,
-      "lengthChange": true,
-      "searching": true,
-      "ordering": true,
-      "info": true,
-      "autoWidth": true,
-    });
-  });
-</script>
+
 <script>
 $(document).ready(function(){
 	 
@@ -440,5 +377,3 @@ function approve(clicked_id)
 	document.getElementById("clicked_id").style.display = "none";
 }*/
 </script>
-</body>
-</html>

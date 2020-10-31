@@ -1,7 +1,7 @@
 <?php
+include("config.php");
 $message='';
 if(isset($_POST['submit'])){
-	include("config.php");
 	$country = $_POST['country_id'];
 	$franchise_type = $_POST['franchise_type'];
 	$franchise=$_POST['franchise'];
@@ -30,51 +30,39 @@ if(isset($_POST['submit'])){
 		$message = "Error Adding Franchise Target";
 	}
 }
+require "header1.php";
 ?>
-<!DOCTYPE html>
-<html>
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  
-</head>
-<body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
-			
-			<?php include("header.php")?>
-		  <!-- /.navbar -->
-
-		  <!-- Main Sidebar Container -->
-		  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-			<!-- Brand Logo -->
-			<?php include("sidemenu.php");?>
-		  </aside>
-		 
-			<div class="content-wrapper">
-				<section class="content-header">
-				  <div class="container-fluid">
-					<div class="row mb-2">
-					  <div class="col-sm-12">
-						<ol class="breadcrumb float-sm-left">
-						  <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-						  <li class="breadcrumb-item"><a href="">Franchise Module</a></li>
-						  <li class="breadcrumb-item active">Assign Target</li>
-						</ol>
-					  </div>
-					</div>
-					<div class="row mb-2">
-					  <div class="col-sm-12">
-						<h3 style="text-align: center;">Assign Target</h3>
-					  </div>
-					</div>
-				  </div><!-- /.container-fluid -->
-				</section>
-				<section>
-				<h2 style="color:red"><?php echo $message; ?></h2>
-				<div class="card p-3">
-		
-				<div class="container">
-						<form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" >
-								  <div class="box-body">
-								  <div class="row">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Franchise Assign Target</h1>
+            <h4 style="color:red"><?php echo $message; ?></h4>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+              <li class="breadcrumb-item">Franchise </li>
+              <li class="breadcrumb-item active">Franchise Assign Target</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-body"> 
+                        <div class="  ">
+            				<form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" >
+            				<input type="hidden" name="country_id" class="form-control" value="<?php echo $_SESSION['country']; ?>">
+                            <div class="box-body">
+                                <div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
 										  <label>Select Country</label>
@@ -134,24 +122,23 @@ if(isset($_POST['submit'])){
                                           </select>
 										</div>
 									</div>
-								</div>
-							    <div class="box-footer text-right">
-									<input type="submit" name="submit"class="btn btn-outline-primary" value="submit">
-								</div>
-									
-							</div>
-							<!-- /.box-body -->
+            					</div>
+                            </div>
+            				<div class="box-footer text-right">
+            					<input type="submit" name="submit"class="btn btn-outline-primary" value="submit">
+                            </div>
+                             </form>
+                        </div>  
+                </div>
+            </div>
 
-								 
-					 </form>
-					 
-					 
-				</div>
-				</div>
-				</section>
-			</div>
-</div>
- </body>
+        </div>
+    </section>
+    </div>
+    
+<?php
+    require "footer1.php";
+?>
 <script>
 $('#target_type').on('change', function() {
     var a = $('#target_type').val();
@@ -193,5 +180,4 @@ $('#franchise_type').on('change', function() {
 		},
 	});
 });
-</script>
- </html>
+</script> 
